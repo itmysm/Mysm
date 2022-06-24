@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+  font-family: 'Inter-Regular';
+  src: url('/fonts/Inter-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'LibreFranklin';
+  src: url('/fonts/LibreFranklin-Medium.ttf');
+}
