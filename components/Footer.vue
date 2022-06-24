@@ -1,3 +1,5 @@
 <template>
-  <footer>1</footer>
+  <footer>
+    <font-awesome-icon :icon="['fas', 'user-secret']" />
+  </footer>
 </template>
