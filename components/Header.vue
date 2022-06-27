@@ -1,3 +1,5 @@
 <template>
-  <header>1</header>
+  <header>
+    <v-icon name="io-ioEllipsis-vertical" />
+  </header>
 </template>

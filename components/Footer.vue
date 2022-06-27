@@ -1,5 +1,5 @@
 <template>
   <footer>
-    <font-awesome-icon :icon="['fas', 'user-secret']" />
+    <icon name="io-ellipsis-vertical"></icon>
   </footer>
 </template>
