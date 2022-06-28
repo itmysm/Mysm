@@ -51,12 +51,11 @@ module.exports = {
           secondary: "#1E293B",
           tertiary: "#283447",
           neutral: "#3d4451",
-          elements: "#B0BBC7",
+          element: "#a991f7",
           background: "#0f172a",
           title: "#ffffff",
           description: "#5E6A7E",
           active: "#0EA5E9",
-
         },
       },
     ],

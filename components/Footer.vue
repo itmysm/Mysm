@@ -1,5 +1,3 @@
 <template>
-  <footer>
-    <icon name="io-ellipsis-vertical"></icon>
-  </footer>
+  <footer>1</footer>
 </template>

@@ -1,5 +1,5 @@
 <template>
-  <div data-theme="dark" class="bg-background">
+  <div>
     <NuxtLayout name="default" />
   </div>
 </template>
