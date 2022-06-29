@@ -29,6 +29,7 @@
         bg-secondary
         rounded-box
         w-56
+        mt-12
         capitalize
       "
     >
