@@ -1,7 +1,11 @@
 <template>
   <div class="dropdown dropdown-end">
     <label tabindex="0" class="btn btn-ghost hover:bg-transparent p-0">
-      <component v-if="info.nameIsIcon" :is="info.icon" />
+      <component
+        class="text-info-content"
+        v-if="info.nameIsIcon"
+        :is="list[selected].icon"
+      />
       <p
         v-else
         class="
@@ -12,19 +16,30 @@
           font-normal
         "
       >
-        {{ info.name }}
+        {{ list[info.indexName].name }}
       </p>
     </label>
     <ul
       tabindex="0"
-      class="dropdown-content menu p-2 shadow bg-secondary rounded-box w-56"
+      class="
+        dropdown-content
+        menu
+        p-2
+        shadow
+        bg-secondary
+        rounded-box
+        w-56
+        capitalize
+      "
     >
       <li
         class="text-sm text-neutral hover:text-info"
         v-for="(item, i) in list"
         :key="i"
+        :class="i == selected ? 'text-info' : 'text-neutral'"
+        @click="selected = i"
       >
-        <a :href="item.path">
+        <a>
           <component v-if="info.membersHaveIcons" :is="item.icon" />
           {{ item.name }}
         </a>
@@ -40,9 +55,10 @@ const props = defineProps({
     required: true,
   },
 });
-
 let info = shallowRef(props.itemList.info);
 let list = shallowRef(props.itemList.members);
+let selected = ref(info.value.indexName);
+console.log(list.value);
 </script>
 
 <style>

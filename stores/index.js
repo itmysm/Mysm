@@ -1,6 +1,12 @@
 import { defineStore } from "pinia";
 
-export const indexStore = defineStore({
-  state: () => {
+
+export const useIndexStore = defineStore('index', {
+  state: () => ({
+
+  }),
+
+  getters: {
+    returnIcons: (state) => state.icons
   }
 })

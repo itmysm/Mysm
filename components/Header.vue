@@ -1,15 +1,157 @@
 <template>
-  <header class="flex justify-center px-10 border-b border-indigo-500">
-    <div class="navbar container border-b border-indigo-500 px-0">
-      <div class="flex-1 px-2 lg:flex-none">
+  <header class="flex justify-center h-16 px-5 lg:border-b border-accent">
+    <div
+      class="
+        navbar
+        flex
+        justify-between
+        xl:container
+        border-b border-accent
+        lg:border-none
+        px-0
+      "
+    >
+      <div class="flex-1 lg:flex-none px-0">
         <a class="text-lg font-bold">Mysm</a>
       </div>
-      <div class="flex justify-end flex-1 px-2 text-xs">
-        <div class="flex items-stretch">
-          <commonSearchBox class="mx-3" />
-          <commonDropdown />
+      <div class="flex justify-end px-0 text-xs h-full">
+        <div class="flex items-center h-full">
+          <ul class="flex items-center capitalize hidden lg:flex">
+            <li class="ml-6">
+              <a class="text-primary-content text-sm hover:text-info" href="#"
+                >blog</a
+              >
+            </li>
+            <li class="ml-6">
+              <a class="text-primary-content text-sm hover:text-info" href="#"
+                >contact</a
+              >
+            </li>
+            <li class="ml-6">
+              <commonDropdown
+                class="text-neutral hover:text-neutral-focus"
+                :itemList="desktopMenuDropdown"
+              />
+            </li>
+          </ul>
+
+          <hr
+            class="
+              bg-accent
+              text-transparent
+              w-[1px]
+              h-[20px]
+              ml-6
+              border-none
+              hidden
+              lg:flex
+            "
+          />
+
+          <commonSearchBox class="text-neutral hover:text-neutral-focus ml-6" />
+
+          <commonDropdown
+            class="text-neutral hover:text-neutral-focus lg:hidden ml-6"
+            :itemList="mobileMenuDropdown"
+          />
+
+          <commonDropdownAdvanced
+            class="text-neutral hover:text-neutral-focus hidden lg:flex ml-6"
+            :itemList="themes"
+          />
         </div>
       </div>
     </div>
   </header>
 </template>
+
+<script setup>
+import { inject } from "vue";
+const icons = inject("icons");
+
+const mobileMenuDropdown = shallowReactive({
+  info: {
+    nameIsIcon: true,
+    icon: icons.moreVerticalFill,
+    membersHaveIcons: true,
+  },
+
+  members: [
+    {
+      name: "Blog",
+      icon: icons.bookClose,
+      path: "/",
+    },
+    {
+      name: "Idk",
+      icon: icons.crown,
+      path: "/",
+    },
+    {
+      name: "Tools",
+      icon: icons.sparkles,
+      path: "/",
+    },
+  ],
+});
+
+const desktopMenuDropdown = shallowReactive({
+  info: {
+    nameIsIcon: false,
+    name: "tools",
+    membersHaveIcons: true,
+  },
+
+  members: [
+    {
+      name: "Graph",
+      icon: icons.statisticUp,
+      path: "/",
+    },
+    {
+      name: "Idk",
+      icon: icons.telescope,
+      path: "/",
+    },
+    {
+      name: "undefined",
+      icon: icons.sparkles,
+      path: "/",
+    },
+    {
+      name: "more tools",
+      icon: icons.linkOut,
+      path: "/",
+    },
+  ],
+});
+
+const themes = shallowRef({
+  info: {
+    nameIsIcon: true,
+    default: false,
+    indexName: 0,
+    membersHaveIcons: true,
+    nameChangeable: true,
+  },
+
+  members: [
+    {
+      name: "dark",
+      icon: icons.moon,
+      path: "/",
+    },
+    {
+      name: "light",
+      icon: icons.sun,
+      path: "/",
+    },
+    {
+      name: "default",
+      icon: icons.laptopDevice,
+      path: "/",
+    },
+  ],
+});
+defineProps();
+</script>

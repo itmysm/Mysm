@@ -47,15 +47,25 @@ module.exports = {
     themes: [
       {
         dark: {
-          primary: "#a991f7",
+          primary: "#0f172a",
+          'primary-focus': "#000",
+          'primary-content': "#ffffff",
+
           secondary: "#1E293B",
-          tertiary: "#283447",
-          neutral: "#3d4451",
-          element: "#a991f7",
-          background: "#0f172a",
+          'secondary-focus': "#2a3446",
+          'secondary-content': "#ffffff",
+
+          accent: "#2a3347",
+          'accent-focus': "#3d4451",
+          'neutral': "#94a3b8",
+          'neutral-focus': "#cbd5e1",
+          'neutral-content': "#fff",
           title: "#ffffff",
           description: "#5E6A7E",
           active: "#0EA5E9",
+          background: "#0f172a",
+          "info": "#38bdf8",
+          "info-content": "#0EA5E9",
         },
       },
     ],

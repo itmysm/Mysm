@@ -18,6 +18,6 @@
 </template>
 
 <script setup>
-import search from "~icon/akar-icons/Search";
+import search from "~icons/akar-icons/Search";
 </script>
 
