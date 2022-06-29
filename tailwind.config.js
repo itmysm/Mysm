@@ -19,8 +19,8 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      sans: ["", 'Inter-Regular'],
-      serif: ['Inter-Regular'],
+      sans: ["Inter", 'Libre Franklin'],
+      serif: ['Inter', 'Libre Franklin'],
     },
     extend: {
       spacing: {
