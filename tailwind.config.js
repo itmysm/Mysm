@@ -10,10 +10,11 @@ module.exports = {
     //"./*.{vue,js,ts}",
     //"./nuxt.config.{js,ts}",
     './assets/**/*.css',
-    './components/**/*.vue',
+    './components/common/*.vue',
     './components/*.vue',
     './layouts/**/*.vue',
     './layouts/*.vue',
+    './pages/**/*.vue',
     './pages/*.vue',
 
   ],
@@ -33,7 +34,23 @@ module.exports = {
     }
   },
   variants: {
-    extend: {},
+    extend: {
+      keyframes: {
+        wiggle: {
+          '0%, 100%': { transform: 'rotate(-3deg)' },
+          '50%': { transform: 'rotate(3deg)' },
+        },
+        right: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(100px)' }
+        }
+      },
+
+      animation: {
+        wiggle: 'wiggle 1s ease-in-out infinite',
+        right: 'right 1s ease-in-out 5s infinite',
+      }
+    },
   },
   plugins: [require('daisyui')],
   daisyui: {
@@ -47,6 +64,7 @@ module.exports = {
     themes: [
       {
         dark: {
+          "base-100": "#1d243e",
           primary: "#0f172a",
           'primary-focus': "#000",
           'primary-content': "#ffffff",
@@ -62,7 +80,6 @@ module.exports = {
           'neutral-content': "#fff",
           title: "#ffffff",
           description: "#5E6A7E",
-          active: "#0EA5E9",
           background: "#0f172a",
           "info": "#38bdf8",
           "info-content": "#0EA5E9",

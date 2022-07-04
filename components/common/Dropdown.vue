@@ -17,7 +17,16 @@
     </label>
     <ul
       tabindex="0"
-      class="dropdown-content menu p-2 shadow bg-secondary rounded-box w-56"
+      class="
+        dropdown-content
+        rounded-lg
+        menu
+        p-2
+        shadow
+        bg-secondary
+        rounded-box
+        w-56
+      "
     >
       <li
         class="text-sm text-neutral hover:text-info"

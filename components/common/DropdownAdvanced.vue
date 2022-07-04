@@ -27,7 +27,7 @@
         p-2
         shadow
         bg-secondary
-        rounded-box
+        rounded-lg
         w-56
         mt-12
         capitalize
@@ -59,7 +59,6 @@ const props = defineProps({
 let info = shallowRef(props.itemList.info);
 let list = shallowRef(props.itemList.members);
 let selected = ref(info.value.indexName);
-console.log(list.value);
 </script>
 
 <style>

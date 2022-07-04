@@ -16,7 +16,7 @@
         items-start
       "
     >
-      <label class="modal-box bg-secondary rounded-md p-0 mt-8 w-68">
+      <label class="modal-box bg-secondary rounded-lg p-0 mt-8 w-68">
         <div class="form-control px-5">
           <div class="input-group flex items-center">
             <akar-icons-search />

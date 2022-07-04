@@ -12,7 +12,7 @@
       "
     >
       <div class="flex-1 lg:flex-none px-0">
-        <a class="text-lg font-bold">Mysm</a>
+        <a class="text-lg font-bold" href="https://mysm.ir">Mysm</a>
       </div>
       <div class="flex justify-end px-0 text-xs h-full">
         <div class="flex items-center h-full">
@@ -23,15 +23,15 @@
               >
             </li>
             <li class="ml-6">
-              <a class="text-primary-content text-sm hover:text-info" href="#"
-                >contact</a
-              >
-            </li>
-            <li class="ml-6">
               <commonDropdown
                 class="text-neutral hover:text-neutral-focus"
                 :itemList="desktopMenuDropdown"
               />
+            </li>
+            <li class="ml-6">
+              <a class="text-primary-content text-sm hover:text-info" href="/me"
+                >About Me</a
+              >
             </li>
           </ul>
 
@@ -83,13 +83,13 @@ const mobileMenuDropdown = shallowReactive({
       path: "/",
     },
     {
-      name: "Idk",
-      icon: icons.crown,
+      name: "Tools",
+      icon: icons.sparkles,
       path: "/",
     },
     {
-      name: "Tools",
-      icon: icons.sparkles,
+      name: "About Me",
+      icon: icons.person,
       path: "/",
     },
   ],
@@ -153,5 +153,4 @@ const themes = shallowRef({
     },
   ],
 });
-defineProps();
 </script>

@@ -1,10 +1,19 @@
 <template>
   <div>
     <Header />
-    <main></main>
+    <main class="flex justify-center">
+      <NuxtPage class="xl:container" />
+    </main>
     <Footer />
+    <commonAlerts />
   </div>
 </template>
 
 <script setup>
+import { useAlerts } from "~/stores/alerts";
+const store = useAlerts();
+
+onMounted(() => {
+  store.addNewAlert("title", "description", "error");
+});
 </script>
