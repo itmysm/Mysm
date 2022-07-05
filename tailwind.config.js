@@ -15,7 +15,9 @@ module.exports = {
     './layouts/**/*.vue',
     './layouts/*.vue',
     './pages/**/*.vue',
+    './pages/status/*.vue',
     './pages/*.vue',
+    './*.vue',
 
   ],
   theme: {
