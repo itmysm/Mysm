@@ -19,9 +19,10 @@
       <br />
 
       <p class="md:mt-3 mx-5 md:w-1/2 md:text-center text-lg text-neutral">
-        A utility-first CSS framework packed with classes like flex, pt-4,
-        text-center and rotate-90 that can be composed to build any design,
-        directly in your markup.
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi
+        aspernatur ipsa cupiditate adipisci quidem modi, soluta officia in
+        itaque aliquid minima facilis odit tenetur non numquam accusamus unde
+        quaerat repellendus!
       </p>
 
       <ul class="flex w-full px-5 md:justify-center mt-8">
@@ -56,6 +57,11 @@
 </template>
 
 <script setup>
+definePageMeta({
+  title: "this is a test",
+  layout: "default",
+});
+
 import { inject } from "vue";
 const icons = inject("icons");
 

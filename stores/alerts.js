@@ -38,7 +38,6 @@ export const useAlerts = defineStore('alerts', {
       }
 
       this.alerts.push({ title: title, description: description, type: type, icon: 1 })
-      console.log(this.alerts);
     }
   }
 })
