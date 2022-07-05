@@ -1,7 +1,7 @@
 <template>
-  <div>
-    <NuxtLayout name="default" />
-  </div>
+  <NuxtLayout>
+    <NuxtPage />
+  </NuxtLayout>
 </template>
 
 <script setup>
@@ -25,10 +25,8 @@ import CodepenFill from "~icons/akar-icons/CodepenFill";
 import CircleCheckFill from "~icons/akar-icons/CircleCheckFill";
 //import CircleXFill from "~icons/akar-icons/CircleXFill";
 import CircleAlertFill from "~icons/akar-icons/CircleAlertFill";
-
 // directions
 import ChevronDown from "~icons/akar-icons/ChevronDown";
-
 // persons
 import Person from "~icons/akar-icons/Person";
 
@@ -44,13 +42,11 @@ const icons = {
   circleCheckFill: CircleCheckFill,
   // circleXFill: CircleXFill,
   circleAlertFill: CircleAlertFill,
-
   // themes
   sun: Sun,
   moon: Moon,
   laptopDevice: LaptopDevice,
   statisticUp: StatisticUp,
-
   // socials
   instagramFill: InstagramFill,
   telegramFill: TelegramFill,

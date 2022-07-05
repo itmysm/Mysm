@@ -2,7 +2,7 @@
   <div>
     <Header />
     <main class="flex justify-center">
-      <NuxtPage class="xl:container" />
+      <slot class="xl:container" />
     </main>
     <Footer />
     <commonAlerts />
