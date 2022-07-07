@@ -30,7 +30,11 @@
         <p class="text-info-content lowercase">
           <span class="mr-2">$</span> {{ commend[i].commend }}
         </p>
-        <p :class="'text-' + commend[i].type">
+        <p
+          :class="
+            commend[i].type === 'success' ? 'text-success' : 'text-warning'
+          "
+        >
           <span class="mr-2">></span> {{ commend[i].response }}
         </p>
       </div>
