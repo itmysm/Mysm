@@ -1,8 +1,9 @@
 <template>
   <div>
-    <Header />
-    <main class="flex justify-center">
-      <slot class="xl:container" />
+    <Header class="fixed w-full" />
+    <generalBubble class="z-[-1] blur-sm" />
+    <main class="flex justify-center pt-20">
+      <slot />
     </main>
     <Footer />
     <commonAlerts />

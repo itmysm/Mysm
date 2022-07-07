@@ -2,21 +2,19 @@ module.exports = {
   mode: "jit",
   content: [
     //"./assets/**/*.{css}",
-    //"./components/*.{vue,js}",
-    //"./components/**/*.{vue,js}",
     //"./pages/*.vue",
     //"./pages/**/*.vue",
     //"./plugins/**/*.{js,ts}",
     //"./*.{vue,js,ts}",
     //"./nuxt.config.{js,ts}",
     './assets/**/*.css',
-    './components/common/*.vue',
-    './components/*.vue',
+    "./components/*.{vue,js}",
+    "./components/**/*.{vue,js}",
     './layouts/**/*.vue',
     './layouts/*.vue',
     './pages/**/*.vue',
     './pages/status/*.vue',
-    './pages/*.vue',
+    './pages/index.vue',
     './*.vue',
 
   ],
@@ -32,27 +30,32 @@ module.exports = {
       },
       borderRadius: {
         '4xl': '2rem',
-      }
-    }
-  },
-  variants: {
-    extend: {
-      keyframes: {
-        wiggle: {
-          '0%, 100%': { transform: 'rotate(-3deg)' },
-          '50%': { transform: 'rotate(3deg)' },
-        },
-        right: {
-          '0%': { transform: 'translateX(0)' },
-          '100%': { transform: 'translateX(100px)' }
-        }
       },
 
       animation: {
-        wiggle: 'wiggle 1s ease-in-out infinite',
-        right: 'right 1s ease-in-out 5s infinite',
+        toUp: 'toUp 34s linear 3s infinite',
+        toLeft: 'toLeft 34s linear infinite',
+        toUpLeft: 'toUpLeft 34s linear 1s infinite',
+      },
+
+      keyframes: {
+        toLeft: {
+          '0%': { transform: 'translate(0px)' },
+          '50%': { transform: 'translate(50px, 80px)' },
+          '100%': { transform: 'translate(0px, 0px)' },
+        },
+        toUp: {
+          '0%': { transform: 'translate(0px)' },
+          '50%': { transform: 'translate(-30px, -80px)' },
+          '100%': { transform: 'translate(0px, 0px)' },
+        },
+        toUpLeft: {
+          '0%': { transform: 'translate(0px)' },
+          '50%': { transform: 'translate(30px, -100px)' },
+          '100%': { transform: 'translate(0px, 0px)' },
+        },
       }
-    },
+    }
   },
   plugins: [require('daisyui')],
   daisyui: {
