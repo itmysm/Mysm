@@ -1,5 +1,16 @@
 <template>
-  <header class="flex justify-center h-16 px-5 lg:border-b border-accent">
+  <header
+    :class="motionBlur ? 'motion--blur' : ''"
+    class="
+      flex
+      justify-center
+      h-16
+      px-5
+      lg:border-b
+      border-accent
+      transition-colors
+    "
+  >
     <div
       class="
         navbar
@@ -18,7 +29,9 @@
         <div class="flex items-center h-full">
           <ul class="flex items-center capitalize hidden lg:flex">
             <li class="ml-6">
-              <a class="text-primary-content text-sm hover:text-info" href="#"
+              <a
+                class="text-primary-content text-sm hover:text-info"
+                href="/blog"
                 >blog</a
               >
             </li>
@@ -68,6 +81,7 @@
 <script setup>
 import { inject } from "vue";
 const icons = inject("icons");
+const motionBlur = ref(false);
 
 const mobileMenuDropdown = shallowReactive({
   info: {
@@ -80,17 +94,17 @@ const mobileMenuDropdown = shallowReactive({
     {
       name: "Blog",
       icon: icons.bookClose,
-      path: "/",
+      path: "/blog",
     },
     {
       name: "Tools",
       icon: icons.sparkles,
-      path: "/",
+      path: "/tools",
     },
     {
       name: "About Me",
       icon: icons.person,
-      path: "/",
+      path: "/me",
     },
   ],
 });
@@ -106,22 +120,22 @@ const desktopMenuDropdown = shallowReactive({
     {
       name: "Graph",
       icon: icons.statisticUp,
-      path: "/",
+      path: "/tools/graph",
     },
     {
       name: "Idk",
       icon: icons.telescope,
-      path: "/",
+      path: "/tools/graph",
     },
     {
       name: "undefined",
       icon: icons.sparkles,
-      path: "/",
+      path: "/tools/graph",
     },
     {
       name: "more tools",
       icon: icons.linkOut,
-      path: "/",
+      path: "/tools",
     },
   ],
 });
@@ -153,4 +167,22 @@ const themes = shallowRef({
     },
   ],
 });
+
+onMounted(() => {
+  window.scrollY > 20 ? (motionBlur.value = true) : (motionBlur.value = false);
+
+  window.addEventListener("scroll", () => {
+    window.scrollY > 20
+      ? (motionBlur.value = true)
+      : (motionBlur.value = false);
+  });
+});
 </script>
+
+
+<style scoped>
+.motion--blur {
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(4px);
+}
+</style>
