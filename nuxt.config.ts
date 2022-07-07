@@ -4,10 +4,6 @@ import IconsResolver from 'unplugin-icons/resolver'
 import Components from 'unplugin-vue-components/vite'
 
 export default defineNuxtConfig({
-  css: [
-    "~/assets/css/tailwind.css",
-    '@fortawesome/fontawesome-svg-core/styles.css'
-  ],
   build: {
     postcss: {
       postcssOptions: {

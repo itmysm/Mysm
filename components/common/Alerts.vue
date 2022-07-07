@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex flex-col bottom-0 h-fit fixed w-4/5 ml-5 ease-in duration-300"
+    class="hidden flex-col bottom-0 h-fit fixed w-4/5 ml-5 ease-in duration-300"
   >
     <div
       class="
