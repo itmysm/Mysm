@@ -4,14 +4,10 @@ import IconsResolver from 'unplugin-icons/resolver'
 import Components from 'unplugin-vue-components/vite'
 
 export default defineNuxtConfig({
+  css: ['~/assets/css/tailwind.css'],
   build: {
     postcss: {
-      postcssOptions: {
-        plugins: {
-          tailwindcss: {},
-          autoprefixer: {},
-        },
-      },
+      postcssOptions: require('./postcss.config.js'),
     },
   },
   vite: {

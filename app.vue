@@ -62,5 +62,5 @@ const icons = {
 
 provide("icons", icons);
 
-import "~/assets/css/tailwind.css";
+import "@/assets/css/tailwind.css";
 </script>

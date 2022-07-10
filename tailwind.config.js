@@ -1,9 +1,6 @@
 module.exports = {
-  mode: "jit",
   content: [
     //"./assets/**/*.{css}",
-    //"./pages/*.vue",
-    //"./pages/**/*.vue",
     //"./plugins/**/*.{js,ts}",
     //"./*.{vue,js,ts}",
     //"./nuxt.config.{js,ts}",
@@ -12,10 +9,9 @@ module.exports = {
     "./components/**/*.{vue,js}",
     './layouts/**/*.vue',
     './layouts/*.vue',
-    './pages/**/*.vue',
-    './pages/status/*.vue',
-    './pages/index.vue',
     './*.vue',
+    `pages/index.vue`,
+    `pages/**/*.vue`,
 
   ],
   theme: {
@@ -33,12 +29,20 @@ module.exports = {
       },
 
       animation: {
+        textGradient: 'textGradient 15s linear infinite',
         toUp: 'toUp 34s linear 3s infinite',
         toLeft: 'toLeft 34s linear infinite',
         toUpLeft: 'toUpLeft 34s linear 1s infinite',
       },
 
       keyframes: {
+
+        textGradient: {
+          to: {
+            'background-position': '200% center;'
+          }
+        },
+
         toLeft: {
           '0%': { transform: 'translate(0px)' },
           '50%': { transform: 'translate(50px, 80px)' },
