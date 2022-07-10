@@ -1,0 +1,41 @@
+[
+  {
+    "commends": [
+      {
+        "type": "success",
+        "commend": "npm install JavaScript",
+        "response": "Done!"
+      },
+      {
+        "type": "success",
+        "commend": "npm install Vue Nuxt Vuetify",
+        "response": "Done!"
+      },
+      {
+        "type": "success",
+        "commend": "npm install Jquery",
+        "response": "Done!"
+      },
+      {
+        "type": "success",
+        "commend": "npm install Sass",
+        "response": "Done!"
+      },
+      {
+        "type": "success",
+        "commend": "npm install Tailwind",
+        "response": "Done!"
+      },
+      {
+        "type": "success",
+        "commend": "npm install Bootstrap",
+        "response": "Done!"
+      },
+      {
+        "type": "warning",
+        "commend": "npm install TypeScript",
+        "response": "Installing..."
+      }
+    ]
+  }
+]

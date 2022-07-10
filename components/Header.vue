@@ -9,6 +9,7 @@
       lg:border-b
       border-accent
       transition-colors
+      z-[999]
     "
   >
     <div
