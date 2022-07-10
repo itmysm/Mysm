@@ -43,15 +43,52 @@
     </div>
 
     <section class="flex flex-col items-center px-5">
-      <h2 class="text-2xl font-black leading-tight mb-10">
+      <h2 class="text-2xl font-bold leading-tight mb-5 md:mb-10">
         technologies, languages and frameworks.
       </h2>
-      <commonCodeMockup :commends="commendsCenter" />
+      <commonCodeMockup :commends="commends" />
     </section>
 
-    <section v-show="false" class="flex flex-col items-center h-fit">
-      <h2 class="text-2xl font-black leading-tight mb-10">Work Experience</h2>
-      <commonTimeline :experiences="experiences" />
+    <section class="w-full flex flex-col md:items-center mb-20 px-5">
+      <h2 class="font-bold text-2xl mb-5 md:mb-10">Skills</h2>
+
+      <div class="w-full lg:w-2/3 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div
+          class="
+            bg-secondary
+            rounded-md
+            w-58
+            max-w-sm
+            min-h-44
+            px-4
+            py-4
+            overflow-hidden
+            hover:scale-[1.05]
+            transition-all
+            duration-500
+            cursor-default
+          "
+          v-for="(item, i) in mySkills"
+          :key="i"
+        >
+          <img :src="item.icon" alt="shit" class="w-16" />
+          <h4 class="font-bold text-primary-content mb-1">
+            {{ item.title }}
+          </h4>
+          <p class="text-neutral text-sm overflow-hidden">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero,
+            eligendi? Quae soluta atque doloremque maxime ipsum totam
+            repellendus officia optio, saepe maiores eos dolorem corrupti
+            molestiae non perferendis laboriosam earum.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="w-full flex flex-col md:items-center pb-10 px-5">
+      <h2 class="font-bold text-2xl mb-5 md:mb-10">my latest cool projects.</h2>
+
+      <div class="w-full lg:w-1/2 grid grid-cols-1 md:grid-cols-3 gap-4">1</div>
     </section>
   </div>
 </template>
@@ -63,52 +100,18 @@ definePageMeta({
 });
 
 import { inject } from "vue";
+import commends from "~/static/data/home/me/technologies.json";
+import skills from "~/static/data/home/me/skills.json";
+
+const commendsCenter = reactive(commends);
+const mySkills = skills;
 const icons = inject("icons");
 
 const socialMedias = [
-  /*{ icon: icons.instagramFill, path: "https://www.instagram.com/itmysm" },
-  { icon: icons.telegramFill, path: "https://t.me/itmysm" },*/
   { icon: icons.linkedinBoxFill, path: "https://www.instagram.com/itmysm" },
   { icon: icons.githubFill, path: "https://github.com/itmysm" },
   { icon: icons.codepenFill, path: "https://www.codepen.io/itmysm" },
   { icon: icons.twitterFill, path: "https://www.twitter.com/itmysm" },
-];
-
-const commendsCenter = [
-  {
-    commends: [
-      { type: "success", commend: "npm install JavaScript", response: "Done!" },
-
-      {
-        type: "success",
-        commend: "npm install Vue Nuxt Vuetify",
-        response: "Done!",
-      },
-
-      { type: "success", commend: "npm install Jquery", response: "Done!" },
-
-      { type: "success", commend: "npm install Sass", response: "Done!" },
-      { type: "success", commend: "npm install Tailwind", response: "Done!" },
-      { type: "success", commend: "npm install Bootstrap", response: "Done!" },
-
-      {
-        type: "warning",
-        commend: "npm install TypeScript",
-        response: "Installing...",
-      },
-    ],
-  },
-];
-
-const experiences = [
-  {
-    date: "November 10, 2021",
-    title: "Start working in vofour as Front & Developer",
-  },
-  {
-    date: "November 10, 2021",
-    title: "Start working in vofour as Front & Developer",
-  },
 ];
 </script>
 
