@@ -1,9 +1,5 @@
 module.exports = {
   content: [
-    //"./assets/**/*.{css}",
-    //"./plugins/**/*.{js,ts}",
-    //"./*.{vue,js,ts}",
-    //"./nuxt.config.{js,ts}",
     './assets/**/*.css',
     "./components/*.{vue,js}",
     "./components/**/*.{vue,js}",
@@ -15,6 +11,13 @@ module.exports = {
 
   ],
   theme: {
+    screens: {
+      'sm': '640px',
+      'md': '768px',
+      'lg': '1024px',
+      'xl': '1280px',
+      '2xl': '1536px',
+    },
     fontFamily: {
       sans: ["Inter", 'Libre Franklin'],
       serif: ['Inter', 'Libre Franklin'],
