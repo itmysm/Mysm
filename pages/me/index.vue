@@ -49,16 +49,25 @@
       <commonCodeMockup :commends="commends" />
     </section>
 
-    <section class="w-full flex flex-col md:items-center mb-20 px-5">
+    <section class="w-full flex flex-col sm:items-center mb-20 px-5">
       <h2 class="font-bold text-2xl mb-5 md:mb-10">Skills</h2>
 
-      <div class="w-full lg:w-2/3 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div
+        class="
+          w-full
+          lg:w-2/3
+          grid grid-cols-1
+          sm:grid-cols-2
+          md:sm:grid-cols-3
+          gap-8
+        "
+      >
         <div
           class="
             bg-secondary
             rounded-md
             w-58
-            max-w-sm
+            lg:max-w-sm
             min-h-44
             px-4
             py-4
@@ -88,7 +97,23 @@
     <section class="w-full flex flex-col md:items-center pb-10 px-5">
       <h2 class="font-bold text-2xl mb-5 md:mb-10">my latest cool projects.</h2>
 
-      <div class="w-full lg:w-1/2 grid grid-cols-1 md:grid-cols-3 gap-4">1</div>
+      <div
+        class="
+          w-full
+          lg:w-4/5
+          xl:w-3/4
+          2xl:w-4/6
+          grid grid-cols-2
+          md:grid-cols-3
+          gap-4
+        "
+      >
+        <commonModal
+          v-for="(project, i) in projects"
+          :key="i"
+          :project="project"
+        />
+      </div>
     </section>
   </div>
 </template>
@@ -102,6 +127,7 @@ definePageMeta({
 import { inject } from "vue";
 import commends from "~/static/data/home/me/technologies.json";
 import skills from "~/static/data/home/me/skills.json";
+import projects from "~/static/data/components/projects.json";
 
 const commendsCenter = reactive(commends);
 const mySkills = skills;
