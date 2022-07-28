@@ -59,8 +59,17 @@ const icons = {
   // persons
   person: Person,
 };
-
 provide("icons", icons);
+
+onMounted(() => {
+  if (!localStorage.getItem("theme")) {
+    console.log("null");
+    window.matchMedia("(prefers-color-scheme: dark)").matches
+      ? document.querySelector("body").setAttribute("data-theme", "dark")
+      : document.querySelector("body").setAttribute("data-theme", "light");
+    localStorage.setItem("theme", "default");
+  }
+});
 
 import "@/assets/css/tailwind.css";
 </script>

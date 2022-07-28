@@ -8,8 +8,8 @@
           text-primary-content
           hover:text-info
           text-sm
+          font-semibold
           capitalize
-          font-normal
         "
       >
         {{ info.name }}
@@ -23,13 +23,14 @@
         menu
         p-2
         shadow
-        bg-secondary
+        bg-secondary-focus
+        shadow-xl
         rounded-box
         w-56
       "
     >
       <li
-        class="text-sm text-neutral hover:text-info"
+        class="text-sm text-accent-content hover:text-info"
         v-for="(item, i) in list"
         :key="i"
       >

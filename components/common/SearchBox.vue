@@ -1,6 +1,9 @@
 <template>
   <div class="overflow-hidden">
-    <label for="my-modal-4" class="btn btn-ghost hover:bg-transparent p-0">
+    <label
+      for="my-modal-4"
+      class="btn btn-ghost hover:bg-transparent p-0 text-neutral"
+    >
       <akar-icons-search />
     </label>
 
@@ -16,7 +19,9 @@
         items-start
       "
     >
-      <label class="modal-box bg-secondary rounded-lg p-0 mt-8 w-68">
+      <label
+        class="modal-box bg-secondary-focus rounded-lg p-0 mt-8 w-68 shadow-xl"
+      >
         <div class="form-control px-5">
           <div class="input-group flex items-center">
             <akar-icons-search />

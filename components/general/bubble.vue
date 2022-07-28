@@ -1,6 +1,7 @@
 <template>
   <section
     class="
+      bg-primary
       fixed
       w-full
       h-screen

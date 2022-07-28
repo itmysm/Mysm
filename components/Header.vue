@@ -9,7 +9,8 @@
       lg:border-b
       border-accent
       transition-colors
-      z-[999]
+      z-[990]
+      !bg-primary/75
     "
   >
     <div
@@ -24,11 +25,13 @@
       "
     >
       <div class="flex-1 lg:flex-none px-0">
-        <a class="text-lg font-bold" href="https://mysm.ir">Mysm</a>
+        <a class="text-primary-content text-lg font-bold" href="https://mysm.ir"
+          >Mysm</a
+        >
       </div>
       <div class="flex justify-end px-0 text-xs h-full">
         <div class="flex items-center h-full">
-          <ul class="flex items-center capitalize hidden lg:flex">
+          <ul class="flex items-center capitalize hidden lg:flex font-semibold">
             <li class="ml-6">
               <a
                 class="text-primary-content text-sm hover:text-info"
@@ -171,7 +174,7 @@ const themes = shallowRef({
 
 onMounted(() => {
   window.scrollY > 20 ? (motionBlur.value = true) : (motionBlur.value = false);
-
+  console.log(useNuxtApp());
   window.addEventListener("scroll", () => {
     window.scrollY > 20
       ? (motionBlur.value = true)
@@ -183,7 +186,6 @@ onMounted(() => {
 
 <style scoped>
 .motion--blur {
-  background: rgba(15, 23, 42, 0.7);
   backdrop-filter: blur(4px);
 }
 </style>
