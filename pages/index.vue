@@ -149,10 +149,11 @@
 
         <div class="grid grid-cols-12 gap-4 mt-8 lg:mt-16">
           <div
-            v-for="(post, i) in posts"
+            v-for="(post, i) in posts.splice(0, 3)"
             :key="i"
             class="
-              mb-8
+              mb-14
+              md:mb-8
               col-start-2 col-span-10
               md:col-start-2 md:col-span-10
               2xl:col-start-3 2xl:col-span-8
@@ -230,6 +231,12 @@
             </a>
           </div>
         </div>
+
+        <div class="flex justify-center mt-2">
+          <button class="btn btn-info text-primary capitalize">
+            See All Posts
+          </button>
+        </div>
       </div>
     </section>
   </div>
@@ -241,6 +248,8 @@ import posts from "~/static/data/home/blog/blog.json";
 definePageMeta({
   layout: "default",
 });
+
+const postsLimit = 3;
 </script>
 
 <style>
