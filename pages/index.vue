@@ -158,7 +158,7 @@
               md:col-start-2 md:col-span-10
               2xl:col-start-3 2xl:col-span-8
               flex
-              justify-center justify-items-start
+              md:justify-start justify-items-start
             "
           >
             <a href="#" class="flex flex-col md:flex-row">
@@ -233,9 +233,7 @@
         </div>
 
         <div class="flex justify-center mt-2">
-          <button class="btn btn-info text-primary capitalize">
-            See All Posts
-          </button>
+            <nuxt-link class="btn btn-outline capitalize border-primary-content text-primary-content hover:bg-primary-content hover:text-primary" to="/blog">See More</nuxt-link>
         </div>
       </div>
     </section>
