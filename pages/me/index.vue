@@ -65,24 +65,23 @@
       >
         technologies, languages and frameworks.
       </h2>
-      <commonCodeMockup :commends="commends" />
+      <commonCodeMockup :commends="technologies.body" />
     </section>
   </div>
 </template>
 
 <script setup>
+import { inject } from "vue";
+
 definePageMeta({
   title: "this is a test",
   layout: "default",
 });
 
-import { inject } from "vue";
-import commends from "~/static/data/home/me/technologies.json";
-import skills from "~/static/data/home/me/skills.json";
-import projects from "~/static/data/components/projects.json";
 
-const commendsCenter = reactive(commends);
-const mySkills = skills;
+//const skills = await useAsyncData('projects', () => queryContent('/about/skills').findOne()).data
+//const projects = await useAsyncData('projects', () => queryContent('/projects').findOne()).data
+const technologies = await useAsyncData('projects', () => queryContent('/about/technologies').findOne()).data
 const icons = inject("icons");
 
 const socialMedias = [

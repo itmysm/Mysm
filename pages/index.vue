@@ -98,14 +98,11 @@
             overflow-hidden
           "
           href="#"
-          v-for="(item, i) in tools"
+          v-for="(item, i) in tools.body"
           :key="i"
         >
-          <img
-            src="../static/icons/statistics.png"
-            :alt="item.name"
-            width="40"
-          />
+          <img v-bind:src="'../assets/media/3D/' + item.icon" width="40" :alt="item.name" /> 
+
           <h4
             class="
               text-md text-primary-content
@@ -149,7 +146,7 @@
 
         <div class="grid grid-cols-12 gap-4 mt-8 lg:mt-16">
           <div
-            v-for="(post, i) in posts.splice(0, 3)"
+            v-for="(post, i) in posts.body.splice(0, postsLimit)"
             :key="i"
             class="
               mb-14
@@ -170,11 +167,11 @@
                   md:w-[300px] md:max-h-[200px]
                   lg:w-[400px] lg:max-h-[300px]
                 "
-                src="../static/banners/blog/relax.webp"
+                v-bind:src="'../assets/media/blog/' + post.media"
                 alt=""
               />
               <div class="md:ml-10 px-2 mt-3 md:mt-0">
-                <button class="btn btn-outline btn-xs lg:btn-sm btn-info">
+                <button class="btn btn-outline btn-xs border-info hover:bg-transparent hover:text-info">
                   {{ post.genre }}
                 </button>
 
@@ -232,7 +229,7 @@
           </div>
         </div>
 
-        <div class="flex justify-center mt-2">
+        <div class="flex justify-center mt-8">
             <nuxt-link class="btn btn-outline capitalize border-primary-content text-primary-content hover:bg-primary-content hover:text-primary" to="/blog">See More</nuxt-link>
         </div>
       </div>
@@ -241,13 +238,14 @@
 </template>
 
 <script setup>
-import tools from "~/static/data/home/tools.json";
-import posts from "~/static/data/home/blog/blog.json";
+const tools = await useAsyncData('tools', () => queryContent('/tools').findOne()).data
+const posts = await useAsyncData('blog', () => queryContent('/blog').findOne()).data
 definePageMeta({
   layout: "default",
 });
 
 const postsLimit = 3;
+console.log(posts)
 </script>
 
 <style>

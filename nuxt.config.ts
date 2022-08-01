@@ -28,5 +28,6 @@ export default defineNuxtConfig({
       })
     ]
   },
+  modules: ['@nuxt/content'],
   buildModules: ['@pinia/nuxt'],
 })
