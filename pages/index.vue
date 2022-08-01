@@ -29,7 +29,7 @@
 
       <div class="flex items-center mt-8 lg:mt-16">
         <div class="rounded-full overflow-hidden max-w-[70px] lg:max-w-[110px]">
-          <img src="../../static/banners/edited.jpg" alt="" />
+          <img src="~/assets/media/banners/profile/mysm.jpg" alt="" />
         </div>
 
         <p
@@ -146,7 +146,7 @@
 
         <div class="grid grid-cols-12 gap-4 mt-8 lg:mt-16">
           <div
-            v-for="(post, i) in posts.body.splice(0, postsLimit)"
+            v-for="(post, i) in posts.body"
             :key="i"
             class="
               mb-14
@@ -167,11 +167,11 @@
                   md:w-[300px] md:max-h-[200px]
                   lg:w-[400px] lg:max-h-[300px]
                 "
-                v-bind:src="'../assets/media/blog/' + post.media"
-                alt=""
+                v-bind:src="'../assets/media/banners/blog/' + post.banner"
+                alt="test"
               />
               <div class="md:ml-10 px-2 mt-3 md:mt-0">
-                <button class="btn btn-outline btn-xs border-info hover:bg-transparent hover:text-info">
+                <button class="btn btn-outline btn-xs border-info text-info hover:border-info hover:text-info">
                   {{ post.genre }}
                 </button>
 
@@ -201,7 +201,7 @@
                     "
                   >
                     <img
-                      src=".././static/banners/edited.jpg"
+                      src="~/assets/media/banners/profile/mysm.jpg"
                       alt=""
                       width="200"
                       height="200"

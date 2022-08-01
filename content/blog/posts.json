@@ -1,182 +1,41 @@
 [
   {
-    "banner": "http://dummyimage.com/159x100.png/5fa2dd/ffffff",
-    "title": "Chained Heat",
-    "genre": "Action|Crime|Drama|Thriller",
-    "description": "Toxic eff of harmful algae and algae toxins, slf-hrm, sqla",
-    "author": "Gaelan",
-    "date": "1653223544000",
-    "avatar": "https://robohash.org/doloresdeseruntducimus.png?size=50x50&set=set1"
-  },
-  {
-    "banner": "http://dummyimage.com/241x100.png/dddddd/000000",
-    "title": "O",
-    "genre": "Comedy|Drama",
-    "description": "Unspecified open wound, right ankle, initial encounter",
-    "author": "Celestine",
-    "date": "1647378518000",
-    "avatar": "https://robohash.org/oditrerumsit.png?size=50x50&set=set1"
-  },
-  {
-    "banner": "http://dummyimage.com/228x100.png/ff4444/ffffff",
-    "title": "Miss Congeniality",
-    "genre": "Comedy|Crime",
-    "description": "Partial traum amp of right shldr/up arm, level unsp, subs",
-    "author": "Armin",
-    "date": "1639083117000",
-    "avatar": "https://robohash.org/quaesitsunt.png?size=50x50&set=set1"
-  },
-  {
-    "banner": "http://dummyimage.com/171x100.png/dddddd/000000",
-    "title": "Jim Norton: Please Be Offended",
-    "genre": "Comedy",
-    "description": "Bus occupant injured in collision w statnry object",
-    "author": "Ingamar",
-    "date": "1637895357000",
-    "avatar": "https://robohash.org/quaeratetdeleniti.png?size=50x50&set=set1"
-  },
-  {
-    "banner": "http://dummyimage.com/130x100.png/5fa2dd/ffffff",
-    "title": "Jackboots on Whitehall",
-    "genre": "Animation|Comedy|Sci-Fi|War",
-    "description": "Other specified mononeuropathies",
-    "author": "Ursulina",
-    "date": "1651393311000",
-    "avatar": "https://robohash.org/essenemosint.png?size=50x50&set=set1"
-  },
-  {
-    "banner": "http://dummyimage.com/162x100.png/cc0000/ffffff",
-    "title": "Billy Blazes, Esq.",
-    "genre": "Comedy|Western",
-    "description": "Acquired hemophilia",
-    "author": "Tansy",
-    "date": "1636047591000",
-    "avatar": "https://robohash.org/modisuntlaboriosam.png?size=50x50&set=set1"
-  },
-  {
-    "banner": "http://dummyimage.com/180x100.png/ff4444/ffffff",
-    "title": "The Hound of the Baskervilles",
-    "genre": "Crime|Drama|Horror|Mystery",
-    "description": "Subluxation of distal interphaln joint of r rng fngr, init",
-    "author": "Sean",
-    "date": "1657280995000",
-    "avatar": "https://robohash.org/incidunteumquisquam.png?size=50x50&set=set1"
-  },
-  {
-    "banner": "http://dummyimage.com/183x100.png/5fa2dd/ffffff",
-    "title": "Leap Year (Año bisiesto)",
-    "genre": "Drama",
-    "description": "Wedge compression fracture of fourth lumbar vertebra",
-    "author": "Elsbeth",
-    "date": "1650611640000",
-    "avatar": "https://robohash.org/utlaboriosamea.png?size=50x50&set=set1"
-  },
-  {
-    "banner": "http://dummyimage.com/216x100.png/dddddd/000000",
-    "title": "Kawasaki's Rose ",
-    "genre": "Drama",
-    "description": "Burns of 40-49% of body surface w 20-29% third degree burns",
-    "author": "Ede",
-    "date": "1642215404000",
-    "avatar": "https://robohash.org/facereminuseum.png?size=50x50&set=set1"
-  },
-  {
-    "banner": "http://dummyimage.com/222x100.png/ff4444/ffffff",
-    "title": "Fright Night Part II",
-    "genre": "Horror",
-    "description": "Laceration of heart without hemopericardium, sequela",
-    "author": "Launce",
-    "date": "1639569074000",
-    "avatar": "https://robohash.org/molestiaevoluptatemdolorem.png?size=50x50&set=set1"
-  },
-  {
-    "banner": "http://dummyimage.com/152x100.png/cc0000/ffffff",
-    "title": "Rebecca of Sunnybrook Farm",
-    "genre": "Children|Comedy|Drama|Musical",
-    "description": "Unsp pedl cyclst inj in clsn w rail trn/veh in traf, init",
-    "author": "Danella",
-    "date": "1633330869000",
-    "avatar": "https://robohash.org/officiaevenietnam.png?size=50x50&set=set1"
-  },
-  {
-    "banner": "http://dummyimage.com/125x100.png/cc0000/ffffff",
-    "title": "Newton Boys, The",
-    "genre": "Crime|Drama",
-    "description": "Fatigue fracture of vertebra, site unspecified",
-    "author": "Daphene",
-    "date": "1642760773000",
-    "avatar": "https://robohash.org/eosinciduntnesciunt.png?size=50x50&set=set1"
-  },
-  {
-    "banner": "http://dummyimage.com/131x100.png/dddddd/000000",
-    "title": "Krays, The",
-    "genre": "Drama",
-    "description": "Lacerat musc and tendons at ank/ft level, unsp foot, sequela",
-    "author": "Alyce",
-    "date": "1642379991000",
-    "avatar": "https://robohash.org/blanditiisavoluptatem.png?size=50x50&set=set1"
-  },
-  {
-    "banner": "http://dummyimage.com/106x100.png/dddddd/000000",
-    "title": "Samurai III: Duel on Ganryu Island (a.k.a. Bushido) (Miyamoto Musashi kanketsuhen: kettô Ganryûjima)",
-    "genre": "Action|Adventure|Drama",
-    "description": "Superficial foreign body of left ear",
-    "author": "Ham",
-    "date": "1640085878000",
-    "avatar": "https://robohash.org/odittemporibusporro.png?size=50x50&set=set1"
-  },
-  {
-    "banner": "http://dummyimage.com/245x100.png/5fa2dd/ffffff",
-    "title": "April Story",
-    "genre": "Romance",
-    "description": "Benign neoplasm of mesothelial tissue of pleura",
-    "author": "Morgan",
-    "date": "1647248568000",
-    "avatar": "https://robohash.org/ipsalaboriosamlibero.png?size=50x50&set=set1"
-  },
-  {
-    "banner": "http://dummyimage.com/249x100.png/ff4444/ffffff",
-    "title": "Milk Money",
-    "genre": "Comedy|Romance",
-    "description": "Nondisp suprcndl fx w/o intrcndl extn low end l femr, 7thG",
-    "author": "Miranda",
-    "date": "1633088258000",
-    "avatar": "https://robohash.org/repudiandaeeumat.png?size=50x50&set=set1"
-  },
-  {
-    "banner": "http://dummyimage.com/247x100.png/dddddd/000000",
-    "title": "Hunted, The",
-    "genre": "Action|Drama|Thriller",
-    "description": "Toxic effect of dichloromethane, undetermined, init encntr",
-    "author": "Lisa",
-    "date": "1638837502000",
-    "avatar": "https://robohash.org/quamporroaliquam.png?size=50x50&set=set1"
-  },
-  {
-    "banner": "http://dummyimage.com/118x100.png/ff4444/ffffff",
-    "title": "Power (Jew Süss)",
-    "genre": "Drama|Romance",
-    "description": "Primary ovarian failure",
-    "author": "Dimitry",
-    "date": "1628676605000",
-    "avatar": "https://robohash.org/ipsaexpeditaqui.png?size=50x50&set=set1"
-  },
-  {
-    "banner": "http://dummyimage.com/128x100.png/dddddd/000000",
-    "title": "Beyond the Stars",
-    "genre": "Drama|Sci-Fi",
-    "description": "Pnctr w fb of unsp lesser toe(s) w/o damage to nail, sequela",
-    "author": "Sheppard",
-    "date": "1651038430000",
-    "avatar": "https://robohash.org/deseruntcumquearchitecto.png?size=50x50&set=set1"
-  },
-  {
-    "banner": "http://dummyimage.com/176x100.png/cc0000/ffffff",
-    "title": "The Woman on Pier 13",
-    "genre": "Drama|Thriller",
-    "description": "Superior glenoid labrum lesion of unspecified shoulder",
-    "author": "Hewitt",
+    "title": "How Can i Create A shortcut",
+    "genre": "OOP",
+    "description": "ohhh lab lab!! lab and we create this a so amazing bro lorem and...",
+    "author": "Mysm",
     "date": "1651780713000",
-    "avatar": "https://robohash.org/quisquamaliquamquaerat.png?size=50x50&set=set1"
+    "avatar": "mysm.jpg",
+    "banner": "first-post.webp",
+    "banners": [],
+    "views": 0,
+    "liked": 0,
+    "unliked": 0
+  },
+  {
+    "title": "and now you can installed",
+    "genre": "TEC",
+    "description": "ohhh lab lab!! lab and we create this a so amazing bro lorem and...",
+    "author": "Mysm",
+    "date": "1651780713000",
+    "avatar": "mysm.jpg",
+    "banner": "relax.webp",
+    "banners": [],
+    "views": 0,
+    "liked": 0,
+    "unliked": 0
+  },
+  {
+    "title": "oh trap!!!",
+    "genre": "new",
+    "description": "ohhh lab lab!! lab and we create this a so amazing bro lorem and...",
+    "author": "Mysm",
+    "date": "1651780713000",
+    "avatar": "mysm.jpg",
+    "banner": "file.webp",
+    "banners": [],
+    "views": 0,
+    "liked": 0,
+    "unliked": 0
   }
 ]
