@@ -162,10 +162,10 @@
               <img
                 class="
                   rounded-xl
-                  w-[400px]
-                  max-h-[300px]
+                  w-[340px]
+                  max-h-[270px]
                   md:w-[300px] md:max-h-[200px]
-                  lg:w-[400px] lg:max-h-[300px]
+                  lg:w-[340px] lg:max-h-[270px]
                 "
                 v-bind:src="'../assets/media/banners/blog/' + post.banner"
                 alt="test"
