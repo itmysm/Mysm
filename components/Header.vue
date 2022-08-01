@@ -25,20 +25,14 @@
       "
     >
       <div class="flex-1 lg:flex-none px-0">
-        <a class="text-primary-content text-lg font-bold" href="https://mysm.ir"
-          >Mysm</a
-        >
+         <nuxt-link class="text-primary-content text-lg font-bold" to='/'>Mysm</nuxt-link>
       </div>
       <div class="flex justify-end px-0 text-xs h-full">
         <div class="flex items-center h-full">
           <ul class="flex items-center capitalize hidden lg:flex font-semibold">
             <li class="ml-6">
-              <a
-                class="text-primary-content text-sm hover:text-info"
-                href="/blog"
-                >blog</a
-              >
-            </li>
+               <nuxt-link class="text-primary-content text-sm hover:text-info" to='/blog'>blog</nuxt-link>
+            </li> 
             <li class="ml-6">
               <commonDropdown
                 class="text-neutral hover:text-neutral-focus"
@@ -46,9 +40,7 @@
               />
             </li>
             <li class="ml-6">
-              <a class="text-primary-content text-sm hover:text-info" href="/me"
-                >About Me</a
-              >
+              <nuxt-link class="text-primary-content text-sm hover:text-info" to='/me'>about me</nuxt-link>
             </li>
           </ul>
 

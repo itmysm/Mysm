@@ -21,18 +21,12 @@
         {{ error.message }}
       </h3>
     </div>
-
-    <a
-      href="/"
-      class="
-        mt-10
+     <nuxt-link to='/' 
+        class="mt-10
         capitalize
         text-info
         hover:text-primary-content
-        transition-all
-      "
-      >Back to home</a
-    >
+        transition-all">Back to home</nuxt-link>
   </div>
 </template>
 

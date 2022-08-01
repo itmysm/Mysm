@@ -34,10 +34,10 @@
         v-for="(item, i) in list"
         :key="i"
       >
-        <a :href="item.path">
+         <nuxt-link :to='item.path'>
           <component v-if="info.membersHaveIcons" :is="item.icon" />
           {{ item.name }}
-        </a>
+         </nuxt-link>
       </li>
     </ul>
   </div>
