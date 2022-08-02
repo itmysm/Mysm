@@ -105,10 +105,6 @@ function iconFinder(name) {
       break;
   }
 }
-
-onMounted(() => {
-  console.log("");
-});
 </script>
 
 <style scoped>

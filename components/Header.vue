@@ -166,7 +166,6 @@ const themes = shallowRef({
 
 onMounted(() => {
   window.scrollY > 20 ? (motionBlur.value = true) : (motionBlur.value = false);
-  console.log(useNuxtApp());
   window.addEventListener("scroll", () => {
     window.scrollY > 20
       ? (motionBlur.value = true)

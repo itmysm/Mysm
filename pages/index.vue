@@ -245,7 +245,6 @@ definePageMeta({
 });
 
 const postsLimit = 3;
-console.log(posts)
 </script>
 
 <style>

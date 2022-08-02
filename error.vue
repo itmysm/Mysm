@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col justify-center items-center w-full h-[92vh]">
+  <div class="flex flex-col justify-center items-center w-full h-screen">
     <div class="flex justify-center items-center mt-10">
       <h3 class="font-black text-xl md:text-4xl text-primary-content">
         {{ error.code }}
@@ -39,6 +39,4 @@ definePageMeta({
 });
 
 const error = reactive(useError().$state.error);
-
-console.log();
 </script>

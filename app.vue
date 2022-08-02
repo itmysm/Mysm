@@ -5,6 +5,7 @@
 </template>
 
 <script setup>
+import "@/assets/css/tailwind.css";
 import { provide } from "vue";
 import MoreVerticalFill from "~icons/akar-icons/MoreVerticalFill";
 import Crown from "~icons/akar-icons/Crown";
@@ -63,7 +64,6 @@ provide("icons", icons);
 
 onMounted(() => {
   if (!localStorage.getItem("theme")) {
-    console.log("null");
     window.matchMedia("(prefers-color-scheme: dark)").matches
       ? document.querySelector("body").setAttribute("data-theme", "dark")
       : document.querySelector("body").setAttribute("data-theme", "light");
@@ -71,5 +71,4 @@ onMounted(() => {
   }
 });
 
-import "@/assets/css/tailwind.css";
 </script>
