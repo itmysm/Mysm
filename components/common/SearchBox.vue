@@ -13,6 +13,7 @@
       class="
         modal
         cursor-pointer
+        h-screen
         backdrop-blur-sm
         bg-transparent
         flex

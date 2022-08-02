@@ -6,6 +6,8 @@ import '@vue/runtime-core'
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     AkarIconsAir: typeof import('~icons/akar-icons/air')['default']
+    AkarIconsFilter: typeof import('~icons/akar-icons/filter')['default']
+    AkarIconsInfo: typeof import('~icons/akar-icons/info')['default']
     AkarIconsSearch: typeof import('~icons/akar-icons/search')['default']
     AkarIconsTriangleDown: typeof import('~icons/akar-icons/triangle-down')['default']
     RouterLink: typeof import('vue-router')['RouterLink']

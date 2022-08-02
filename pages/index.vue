@@ -46,7 +46,7 @@
             text-neutral-content
           "
         >
-          Frontend developer from <span class="text-info">Tehran/Iran</span>.
+          Frontend developer from <span class="text-info-content">Tehran/Iran</span>.
           Interested in programming and implementing websites
         </p>
       </div>
@@ -256,7 +256,7 @@ const mouseHover = reactive({
   el: 0,
 })
 
-const postsLimit = 3;
+const postsLimit = ref(3);
 </script>
 
 <style>

@@ -24,12 +24,14 @@ import LinkedinBoxFill from "~icons/akar-icons/LinkedinBoxFill";
 import GithubFill from "~icons/akar-icons/GithubFill";
 import CodepenFill from "~icons/akar-icons/CodepenFill";
 import CircleCheckFill from "~icons/akar-icons/CircleCheckFill";
+import Filter from "~icons/akar-icons/Filter";
 //import CircleXFill from "~icons/akar-icons/CircleXFill";
 import CircleAlertFill from "~icons/akar-icons/CircleAlertFill";
 // directions
 import ChevronDown from "~icons/akar-icons/ChevronDown";
 // persons
 import Person from "~icons/akar-icons/Person";
+import Info from "~icons/akar-icons/Info";
 
 const icons = {
   // others
@@ -59,6 +61,7 @@ const icons = {
   chevronDown: ChevronDown,
   // persons
   person: Person,
+  info: Info,
 };
 provide("icons", icons);
 
