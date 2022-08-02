@@ -89,19 +89,24 @@
             w-72
             min-h-[180px] min-w-[288px]
             max-w-[288px]
-            bg-secondary
             h-fit
-            rounded-md
             shadow-md
-            px-8
-            py-5
+            rounded-md
+            bg-secondary
+            p-[2px]
             overflow-hidden
+            transition-all
+            group
           "
+          @mouseover="mouseHover.hovering = true, mouseHover.el = i"
+          @mouseout="mouseHover.el = -1"
+          :class="mouseHover.hovering == true && mouseHover.el == i ? 'bg--animation' : false"
           href="#"
           v-for="(item, i) in tools.body"
           :key="i"
         >
-          <img v-bind:src="'../assets/media/3D/' + item.icon" width="40" :alt="item.name" /> 
+          <div class="flex flex-col items-center justify-center h-full min-h-[inherit] rounded-md bg-secondary px-5">
+            <img class="group-hover:scale-[1.3] transition-all" v-bind:src="'../assets/media/3D/' + item.icon" width="40" :alt="item.name" /> 
 
           <h4
             class="
@@ -117,6 +122,7 @@
           <p class="text-neutral-content text-sm text-center">
             {{ item.description }}
           </p>
+          </div>
         </a>
       </div>
     </section>
@@ -141,7 +147,6 @@
             <br />
             <span class="font-bold text-primary-content">“ Blog “</span>
           </h1>
-          <!-- <p class="text-neutral-content">this is a test from me dude</p> -->
         </div>
 
         <div class="grid grid-cols-12 gap-4 mt-8 lg:mt-16">
@@ -149,6 +154,7 @@
             v-for="(post, i) in posts.body"
             :key="i"
             class="
+              group
               mb-14
               md:mb-8
               col-start-2 col-span-10
@@ -170,7 +176,7 @@
                 v-bind:src="'../assets/media/banners/blog/' + post.banner"
                 alt="test"
               />
-              <div class="md:ml-10 px-2 mt-3 md:mt-0">
+              <div class="md:ml-10 px-2 mt-3 md:mt-0 transition-colors">
                 <button class="btn btn-outline btn-xs border-info text-info hover:border-info hover:text-info">
                   {{ post.genre }}
                 </button>
@@ -182,11 +188,12 @@
                     lg:text-2xl
                     font-bold
                     mt-2
+                    group-hover:text-info-content
                   "
                 >
                   {{ post.title }}
                 </h1>
-                <p class="text-sm lg:text-base text-neutral-content mt-2">
+                <p class="text-sm lg:text-base text-neutral-content mt-2 group-hover:text-info-content">
                   {{ post.description }}
                 </p>
 
@@ -244,6 +251,11 @@ definePageMeta({
   layout: "default",
 });
 
+const mouseHover = reactive({
+  hovering: false,
+  el: 0,
+})
+
 const postsLimit = 3;
 </script>
 
@@ -261,5 +273,23 @@ const postsLimit = 3;
 
 .full-screen {
   width: calc(100vw - 1.25rem);
+}
+
+.bg--animation {
+  background-size: 300% 300%;
+  background-image: linear-gradient(
+        -45deg, 
+        rgba(59,173,227,1) 0%, 
+        rgba(87,111,230,1) 25%, 
+        rgba(152,68,183,1) 51%, 
+        rgba(255,53,127,1) 100%
+  );  
+  animation: AnimateBG 2s ease infinite;
+}
+
+@keyframes AnimateBG { 
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
 }
 </style>

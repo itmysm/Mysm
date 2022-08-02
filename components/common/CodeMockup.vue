@@ -1,6 +1,7 @@
 <template>
   <section
     class="
+      shadow-md 
       bg-secondary
       w-full
       sm:w-3/5
@@ -27,7 +28,7 @@
         v-for="(text, i) in commend"
         :key="i"
       >
-        <p class="text-info-content lowercase">
+        <p class="text-info lowercase">
           <span class="mr-2">$</span> {{ commend[i].commend }}
         </p>
         <p
