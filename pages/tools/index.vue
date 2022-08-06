@@ -1,5 +1,5 @@
 <template>
-  <section class="w-full px-5 xl:px-0 xl:container">
+  <section class="w-full px-5 xl:px-0 xl:container blur-sm">
       <h1
         class="
           mt-5
@@ -17,19 +17,23 @@
       </h1>
 
 
-    <div class="flex justify-between items-end mt-20 border-t pt-2 border-info/25">
-      <h3>this is a test </h3>
+    <div class="flex justify-between items-end mt-20" v-show="sortedTools.length < 2 ? false : true">
+      <h3> </h3>
       <div class="dropdown dropdown-end">
         <label tabindex="0" class="btn btn-outline border-info text-info hover:bg-info btn-sm m-1 capitalize">Sort By</label>
         <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52 text-sm mt-1">
-          <li v-for="option in sortOptions" :key="option" @click="filterBy(i, posts)"><a class="text-info hover:bg-info/25">{{option.name}}</a></li>
+          <li v-for="option in sortOptions" :key="option" @click="filterBy(i, posts)">
+            <a class="text-info hover:bg-info/25">
+              <span class="text-xs"><component :is="option.icon" /></span>
+              {{option.name}}
+            </a>
+          </li>
         </ul>
       </div>
     </div>
 
-    <ul class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-x-5 gap-y-10 my-10">
-      <li class="border border-secondary/25 bg-secondary rounded-md py-3 shadow-md" v-for="(tool, i) in sortedTools" :key="i">
-        
+    <ul class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-x-5 gap-y-10 my-10" v-show="sortedTools.length < 5 ? false : true">
+      <li class="border border-[#000]/[10%] bg-secondary rounded-md py-3 shadow-md cursor-pointer" v-for="(tool, i) in sortedTools" :key="i" @click="changePath(tool.path)">
         <img src="../../assets/media/banners/blog/file.webp" alt="" class="px-3 rounded-md">
         
         <div class="flex justify-between items-center px-3 mt-2 overflow-hidden">
@@ -46,30 +50,22 @@
         </div>
       </li>
     </ul>
-
-  <div class="btn-group flex justify-center">
-    <button class="btn btn-sm btn-info text-primary">1</button>
-    <button class="btn btn-sm btn-primary">2</button>
-    <button class="btn btn-sm btn-info text-primary">3</button>
-    <button class="btn btn-sm btn-info text-primary">4</button>
-  </div>
-
   </section>
 </template>
 
 <script setup>
 import { inject } from "vue";
-import tools from '~/content/tools/tools.json'
+const { data: tools} = await useAsyncData('tools', () => queryContent('/tools').findOne())
+
 const icons = inject("icons");
-let sortedTools = ref(tools)
+let sortedTools = ref(tools.value.body)
 
 definePageMeta({
   layout: "default"
 })
 
-const sortOptions = [{name: "Date"}, {name: "Popular"}]
+const sortOptions = [{name: "Date", icon: icons.ascending}, {name: "Popular", icon: icons.star}]
 const loading = ref(false)
-const postsInEachPage = 10 // show 10 items in page
 
 function filterBy(type = 0, data, category) {
   loading.value = true
@@ -90,6 +86,10 @@ function sortByDate(date) {
 
 function SortByPopularity(date) {
  return date.sort((a, b) => {return b.statistics.views - a.statistics.views})
+}
+
+function changePath(path) {
+  useRouter().push(path)
 }
 
 /*

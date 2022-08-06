@@ -12,6 +12,7 @@
       min-h-16
       pb-5
       mb-20
+      border border-[#000]/[10%]
     "
     v-for="(mockup, i) in mockups"
     :key="i"

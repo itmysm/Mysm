@@ -101,8 +101,8 @@
           @mouseover="mouseHover.hovering = true, mouseHover.el = i"
           @mouseout="mouseHover.el = -1"
           :class="mouseHover.hovering == true && mouseHover.el == i ? 'bg--animation' : false"
-          href="#"
-          v-for="(item, i) in tools.body"
+          :href="item.path"
+          v-for="(item, i) in tools.body.slice(0,4)"
           :key="i"
         >
           <div class="flex flex-col items-center justify-center h-full min-h-[inherit] rounded-md bg-secondary px-5">
@@ -151,7 +151,7 @@
 
         <div class="grid grid-cols-12 gap-4 mt-8 lg:mt-16">
           <div
-            v-for="(post, i) in posts.body"
+            v-for="(post, i) in posts.body.slice(0,4)"
             :key="i"
             class="
               group
@@ -164,7 +164,7 @@
               md:justify-start justify-items-start
             "
           >
-            <a href="#" class="flex flex-col md:flex-row">
+            <a href="/blo" class="flex flex-col md:flex-row">
               <img
                 class="
                   rounded-xl
@@ -176,7 +176,7 @@
                 v-bind:src="'../assets/media/banners/blog/' + post.banner"
                 alt="test"
               />
-              <div class="md:ml-10 px-2 mt-3 md:mt-0 transition-colors">
+              <div class="md:ml-10 px-2 mt-3 md:mt-0">
                 <button class="btn btn-outline btn-xs border-info text-info hover:border-info hover:text-info">
                   {{ post.genre }}
                 </button>
@@ -189,11 +189,12 @@
                     font-bold
                     mt-2
                     group-hover:text-info-content
+                    transition-colors
                   "
                 >
                   {{ post.title }}
                 </h1>
-                <p class="text-sm lg:text-base text-neutral-content mt-2 group-hover:text-info-content">
+                <p class="text-sm lg:text-base text-neutral-content mt-2 group-hover:text-info-content transition-colors">
                   {{ post.description }}
                 </p>
 
@@ -245,11 +246,12 @@
 </template>
 
 <script setup>
-const tools = await useAsyncData('tools', () => queryContent('/tools').findOne()).data
-const posts = await useAsyncData('blog', () => queryContent('/blog').findOne()).data
 definePageMeta({
   layout: "default",
 });
+
+const { data: tools} = reactive(await useAsyncData('tools', () => queryContent('/tools').findOne()))
+const { data: posts } = reactive(await useAsyncData('blog', () => queryContent('/blog').findOne()))
 
 const mouseHover = reactive({
   hovering: false,
@@ -260,12 +262,10 @@ const postsLimit = ref(3);
 </script>
 
 <style>
-/* Hide scrollbar for Chrome, Safari and Opera */
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
 
-/* Hide scrollbar for IE, Edge and Firefox */
 .no-scrollbar {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */

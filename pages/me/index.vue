@@ -72,20 +72,17 @@
 
 <script setup>
 import { inject } from "vue";
-
 definePageMeta({
   title: "this is a test",
   layout: "default",
 });
 
-
-//const skills = await useAsyncData('projects', () => queryContent('/about/skills').findOne()).data
-//const projects = await useAsyncData('projects', () => queryContent('/projects').findOne()).data
-const technologies = await useAsyncData('projects', () => queryContent('/about/technologies').findOne()).data
 const icons = inject("icons");
+const { data } = await useAsyncData('projects', () => queryContent('/about/technologies').findOne())
+let technologies = data.value
 
 const socialMedias = [
-  { icon: icons.linkedinBoxFill, path: "https://www.instagram.com/itmysm" },
+  { icon: icons.linkedinBoxFill, path: "https://www.linkedin.com/in/meysam-kiani-398243202" },
   { icon: icons.githubFill, path: "https://github.com/itmysm" },
   { icon: icons.codepenFill, path: "https://www.codepen.io/itmysm" },
   { icon: icons.twitterFill, path: "https://www.twitter.com/itmysm" },

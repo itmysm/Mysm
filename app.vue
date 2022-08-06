@@ -7,6 +7,7 @@
 <script setup>
 import "@/assets/css/tailwind.css";
 import { provide } from "vue";
+
 import MoreVerticalFill from "~icons/akar-icons/MoreVerticalFill";
 import Crown from "~icons/akar-icons/Crown";
 import Sparkles from "~icons/akar-icons/Sparkles";
@@ -25,16 +26,14 @@ import GithubFill from "~icons/akar-icons/GithubFill";
 import CodepenFill from "~icons/akar-icons/CodepenFill";
 import CircleCheckFill from "~icons/akar-icons/CircleCheckFill";
 import Filter from "~icons/akar-icons/Filter";
-//import CircleXFill from "~icons/akar-icons/CircleXFill";
 import CircleAlertFill from "~icons/akar-icons/CircleAlertFill";
-// directions
 import ChevronDown from "~icons/akar-icons/ChevronDown";
-// persons
 import Person from "~icons/akar-icons/Person";
 import Info from "~icons/akar-icons/Info";
+import Star from "~icons/akar-icons/Star";
+import Ascending from "~icons/akar-icons/ascending";
 
 const icons = {
-  // others
   crown: Crown,
   sparkles: Sparkles,
   bookClose: BookClose,
@@ -43,25 +42,22 @@ const icons = {
   statisticUp: StatisticUp,
   linkOut: LinkOut,
   circleCheckFill: CircleCheckFill,
-  // circleXFill: CircleXFill,
   circleAlertFill: CircleAlertFill,
-  // themes
   sun: Sun,
   moon: Moon,
   laptopDevice: LaptopDevice,
   statisticUp: StatisticUp,
-  // socials
   instagramFill: InstagramFill,
   telegramFill: TelegramFill,
   twitterFill: TwitterFill,
   linkedinBoxFill: LinkedinBoxFill,
   githubFill: GithubFill,
   codepenFill: CodepenFill,
-  // directions
   chevronDown: ChevronDown,
-  // persons
   person: Person,
   info: Info,
+  star: Star,
+  ascending: Ascending
 };
 provide("icons", icons);
 

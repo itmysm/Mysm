@@ -4,38 +4,44 @@
     "genre": "OOP",
     "description": "ohhh lab lab!! lab and we create this a so amazing bro lorem and...",
     "author": "Mysm",
-    "date": 3,
+    "date": "today",
     "avatar": "mysm.jpg",
     "banner": "first-post.webp",
     "banners": [],
-    "views": 0,
-    "liked": 0,
-    "unliked": 0
+    "statistics": {
+      "views": 0,
+      "liked": 0,
+      "unliked": 0
+    }
   },
   {
     "title": "and now you can installed",
     "genre": "TEC",
     "description": "ohhh lab lab!! lab and we create this a so amazing bro lorem and...",
     "author": "Mysm",
-    "date": 44,
+    "date": "last week",
     "avatar": "mysm.jpg",
     "banner": "relax.webp",
     "banners": [],
-    "views": 0,
-    "liked": 0,
-    "unliked": 0
+    "statistics": {
+      "views": 0,
+      "liked": 0,
+      "unliked": 0
+    }
   },
   {
     "title": "oh trap!!!",
     "genre": "new",
     "description": "ohhh lab lab!! lab and we create this a so amazing bro lorem and...",
     "author": "Mysm",
-    "date": 7,
+    "date": "1 Year ago",
     "avatar": "mysm.jpg",
     "banner": "file.webp",
     "banners": [],
-    "views": 0,
-    "liked": 0,
-    "unliked": 0
+    "statistics": {
+      "views": 0,
+      "liked": 0,
+      "unliked": 0
+    }
   }
 ]
