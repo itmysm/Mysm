@@ -67,6 +67,91 @@
       </h2>
       <commonCodeMockup :commends="technologies.body" />
     </section>
+
+    <section class="flex flex-col items-center px-5 mt-16">
+      <h2
+        class="
+          text-2xl
+          lg:text-3xl
+          font-bold
+          text-primary-content
+          leading-tight
+          mb-5
+          md:mb-10
+        "
+      >
+        Latest Projects
+      </h2>
+
+      <div
+        class="
+          w-full
+          grid
+          lg:grid-cols-2
+          gap-4
+          text-info-content
+          xl:container
+          group
+        "
+        v-for="(project, index) in projects.body"
+        :key="index"
+        :class="index > 0 ? 'mt-16' : 'mt-0'"
+      >
+        <div
+          class="
+            flex
+            2xl:justify-end
+            overflow-hidden
+            rounded-md
+            transition-all
+            2xl:max-w-[700px]
+            shadow-md
+            border border-[#000]/[10%]
+          "
+        >
+          <img
+            src="~/assets/media/banners/screenshots/mysm.png"
+            class="group-hover:scale-[1.24] duration-700"
+          />
+        </div>
+        <div class="lg:pl-4 2xl:pl-10">
+          <ul>
+            <li class="mb-2 2xl:mb-6">
+              <h1 class="text-lg xl:text-xl font-bold">Title</h1>
+              <p class="text-sm 2xl:text-base text-neutral-content">
+                Personal Website
+              </p>
+            </li>
+
+            <li class="mb-2 2xl:mb-6">
+              <h1 class="text-lg xl:text-xl font-bold">Description</h1>
+              <p class="text-sm 2xl:text-base text-neutral-content">
+                Simple website for creating lab lab in organzir hflk irhj lher
+                pwrjo juwropeiu
+              </p>
+            </li>
+
+            <li class="mb-2 2xl:mb-6">
+              <h1 class="text-lg xl:text-xl font-bold">
+                Technologies & Frameworks
+              </h1>
+              <p class="text-sm 2xl:text-base text-neutral-content">
+                Vue, Nuxt, Tailwind, Pinia, TypeScript
+              </p>
+            </li>
+
+            <li class="mb-2 2xl:mb-6">
+              <h1 class="text-lg xl:text-xl font-bold">Live Demo</h1>
+              <p class="text-sm 2xl:text-base text-neutral-content">
+                <a class="text-info" href="#" :class="'underline'">
+                  Is Available
+                </a>
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
@@ -78,11 +163,21 @@ definePageMeta({
 });
 
 const icons = inject("icons");
-const { data } = await useAsyncData('projects', () => queryContent('/about/technologies').findOne())
-let technologies = data.value
+const { data } = await useAsyncData("tec", () =>
+  queryContent("/about/technologies").findOne()
+);
+
+const { data: projects } = await useAsyncData("projects", () =>
+  queryContent("/about/projects").findOne()
+);
+
+let technologies = data.value;
 
 const socialMedias = [
-  { icon: icons.linkedinBoxFill, path: "https://www.linkedin.com/in/meysam-kiani-398243202" },
+  {
+    icon: icons.linkedinBoxFill,
+    path: "https://www.linkedin.com/in/meysam-kiani-398243202",
+  },
   { icon: icons.githubFill, path: "https://github.com/itmysm" },
   { icon: icons.codepenFill, path: "https://www.codepen.io/itmysm" },
   { icon: icons.twitterFill, path: "https://www.twitter.com/itmysm" },

@@ -16,4 +16,17 @@ const store = useAlerts();
 onMounted(() => {
   store.addNewAlert("title", "description", "error");
 });
+
+watch(
+  () => useRoute().fullPath,
+  () => {
+    console.log(
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth",
+      })
+    );
+  }
+);
 </script>

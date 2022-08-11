@@ -64,7 +64,7 @@ let selected = ref(info.value.indexName);
 
 onMounted(() => {
   defaultTheme.value = window.matchMedia("(prefers-color-scheme: dark)").matches
-    ? "dark"
+    ? "light"
     : "light";
   theme.value = localStorage.getItem("theme");
 

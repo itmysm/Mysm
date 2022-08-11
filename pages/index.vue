@@ -46,8 +46,9 @@
             text-neutral-content
           "
         >
-          Frontend developer from <span class="text-info-content">Tehran/Iran</span>.
-          Interested in programming and implementing websites
+          Frontend developer from
+          <span class="text-info-content">Tehran/Iran</span>. Interested in
+          programming and implementing websites
         </p>
       </div>
     </section>
@@ -95,33 +96,52 @@
             bg-secondary
             p-[2px]
             overflow-hidden
-            transition-all
             group
           "
-          @mouseover="mouseHover.hovering = true, mouseHover.el = i"
+          @mouseover="(mouseHover.hovering = true), (mouseHover.el = i)"
           @mouseout="mouseHover.el = -1"
-          :class="mouseHover.hovering == true && mouseHover.el == i ? 'bg--animation' : false"
+          :class="
+            mouseHover.hovering == true && mouseHover.el == i
+              ? 'bg--animation'
+              : false
+          "
           :href="item.path"
-          v-for="(item, i) in tools.body.slice(0,4)"
+          v-for="(item, i) in tools.body.slice(0, 4)"
           :key="i"
         >
-          <div class="flex flex-col items-center justify-center h-full min-h-[inherit] rounded-md bg-secondary px-5">
-            <img class="group-hover:scale-[1.3] transition-all" v-bind:src="'../assets/media/3D/' + item.icon" width="40" :alt="item.name" /> 
-
-          <h4
+          <div
             class="
-              text-md text-primary-content
-              mt-1
-              mb-3
-              capitalize
-              border-b-2 border-primary-content/50
+              flex flex-col
+              items-center
+              justify-center
+              h-full
+              min-h-[inherit]
+              rounded-md
+              bg-secondary
+              px-5
             "
           >
-            {{ item.name }}
-          </h4>
-          <p class="text-neutral-content text-sm text-center">
-            {{ item.description }}
-          </p>
+            <img
+              class="group-hover:scale-[1.3] duration-700 transition-all"
+              v-bind:src="'../assets/media/3D/' + item.icon"
+              width="40"
+              :alt="item.name"
+            />
+
+            <h4
+              class="
+                text-md text-primary-content
+                mt-1
+                mb-3
+                capitalize
+                border-b-2 border-primary-content/50
+              "
+            >
+              {{ item.name }}
+            </h4>
+            <p class="text-neutral-content text-sm text-center">
+              {{ item.description }}
+            </p>
           </div>
         </a>
       </div>
@@ -151,7 +171,7 @@
 
         <div class="grid grid-cols-12 gap-4 mt-8 lg:mt-16">
           <div
-            v-for="(post, i) in posts.body.slice(0,4)"
+            v-for="(post, i) in posts.body.slice(0, 4)"
             :key="i"
             class="
               group
@@ -161,7 +181,13 @@
               md:col-start-2 md:col-span-10
               2xl:col-start-3 2xl:col-span-8
               flex
-              md:justify-start justify-items-start
+              md:justify-start
+              justify-items-start
+              shadow-md
+              px-3
+              py-5
+              border border-[#000]/[10%]
+              rounded-md
             "
           >
             <a href="/blo" class="flex flex-col md:flex-row">
@@ -176,8 +202,15 @@
                 v-bind:src="'../assets/media/banners/blog/' + post.banner"
                 alt="test"
               />
-              <div class="md:ml-10 px-2 mt-3 md:mt-0">
-                <button class="btn btn-outline btn-xs border-info text-info hover:border-info hover:text-info">
+              <div class="md:ml-10 px-2 mt-3 md:mt-0 transition-all">
+                <button
+                  class="
+                    btn btn-outline btn-xs
+                    border-info
+                    text-info
+                    hover:border-info hover:text-info
+                  "
+                >
                   {{ post.genre }}
                 </button>
 
@@ -189,12 +222,21 @@
                     font-bold
                     mt-2
                     group-hover:text-info-content
-                    transition-colors
+                    transition-all
                   "
                 >
                   {{ post.title }}
                 </h1>
-                <p class="text-sm lg:text-base text-neutral-content mt-2 group-hover:text-info-content transition-colors">
+                <p
+                  class="
+                    text-sm
+                    lg:text-base
+                    text-neutral-content
+                    mt-2
+                    group-hover:text-info-content
+                    transition-all
+                  "
+                >
                   {{ post.description }}
                 </p>
 
@@ -238,7 +280,17 @@
         </div>
 
         <div class="flex justify-center mt-8">
-            <nuxt-link class="btn btn-outline capitalize border-primary-content text-primary-content hover:bg-primary-content hover:text-primary" to="/blog">See More</nuxt-link>
+          <nuxt-link
+            class="
+              btn btn-outline
+              capitalize
+              border-primary-content
+              text-primary-content
+              hover:bg-primary-content hover:text-primary
+            "
+            to="/blog"
+            >See More</nuxt-link
+          >
         </div>
       </div>
     </section>
@@ -250,13 +302,17 @@ definePageMeta({
   layout: "default",
 });
 
-const { data: tools} = reactive(await useAsyncData('tools', () => queryContent('/tools').findOne()))
-const { data: posts } = reactive(await useAsyncData('blog', () => queryContent('/blog').findOne()))
+const { data: tools } = reactive(
+  await useAsyncData("tools", () => queryContent("/tools").findOne())
+);
+const { data: posts } = reactive(
+  await useAsyncData("blog", () => queryContent("/blog").findOne())
+);
 
 const mouseHover = reactive({
   hovering: false,
   el: 0,
-})
+});
 
 const postsLimit = ref(3);
 </script>
@@ -278,18 +334,24 @@ const postsLimit = ref(3);
 .bg--animation {
   background-size: 300% 300%;
   background-image: linear-gradient(
-        -45deg, 
-        rgba(59,173,227,1) 0%, 
-        rgba(87,111,230,1) 25%, 
-        rgba(152,68,183,1) 51%, 
-        rgba(255,53,127,1) 100%
-  );  
+    -45deg,
+    rgba(59, 173, 227, 1) 0%,
+    rgba(87, 111, 230, 1) 25%,
+    rgba(152, 68, 183, 1) 51%,
+    rgba(255, 53, 127, 1) 100%
+  );
   animation: AnimateBG 2s ease infinite;
 }
 
-@keyframes AnimateBG { 
-  0%{background-position:0% 50%}
-  50%{background-position:100% 50%}
-  100%{background-position:0% 50%}
+@keyframes AnimateBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 </style>

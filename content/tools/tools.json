@@ -1,57 +1,50 @@
 [
   {
-    "name": "tlog",
-    "description": "A simple game where you have to prove that you are not an idiot!",
-    "path":"tlog",
-    "icon": "fire.webp",
-    "statistics": {
-      "views": 0,
-      "likes":0
-    },
-    "published": 123
-  },
-  {
-    "name": "tlog",
-    "description": "A simple game where you have to prove that you are not an idiot!",
-    "path":"tlog",
+    "name": "Graph",
+    "description": "A webapp for analyzing your personal/Groups Messages in social media such as Telegram, Instagram, Whatsapp and another apps...",
+    "path": "graph",
     "icon": "chart.webp",
+    "type": "statistics",
     "statistics": {
       "views": 0,
-      "likes":0
+      "likes": 0
     },
-    "published": 123
+    "published": 9
   },
   {
-    "name": "tlog",
-    "description": "A simple game where you have to prove that you are not an idiot!",
-    "path":"tlog",
-    "icon": "fire.webp",
+    "name": "Graph",
+    "description": "A webapp for analyzing your personal/Groups Messages in social media such as Telegram, Instagram, Whatsapp and another apps...",
+    "path": "graph",
+    "icon": "chart.webp",
+    "type": "statistics",
     "statistics": {
       "views": 0,
-      "likes":0
+      "likes": 0
     },
-    "published": 123
+    "published": 9
   },
   {
-    "name": "tlog",
-    "description": "A simple game where you have to prove that you are not an idiot!",
-    "path":"tlog",
-    "icon": "game.webp",
+    "name": "Graph",
+    "description": "A webapp for analyzing your personal/Groups Messages in social media such as Telegram, Instagram, Whatsapp and another apps...",
+    "path": "graph",
+    "icon": "chart.webp",
+    "type": "statistics",
     "statistics": {
       "views": 0,
-      "likes":0
+      "likes": 0
     },
-    "published": 123
+    "published": 9
   },
   {
-    "name": "tlog",
-    "description": "A simple game where you have to prove that you are not an idiot!",
-    "path":"tlog",
-    "icon": "rocket.webp",
+    "name": "Graph",
+    "description": "A webapp for analyzing your personal/Groups Messages in social media such as Telegram, Instagram, Whatsapp and another apps...",
+    "path": "graph",
+    "icon": "chart.webp",
+    "type": "statistics",
     "statistics": {
       "views": 0,
-      "likes":0
+      "likes": 0
     },
-    "published": 123
+    "published": 9
   }
 ]

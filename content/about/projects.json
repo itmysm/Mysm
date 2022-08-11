@@ -1,0 +1,16 @@
+[
+  {
+    "title": "Personal Website",
+    "description": "a personal website for sharing projects and some fun things",
+    "tec": "Vue, Nuxt, TypeScript, Tailwind, Pinia",
+    "live": "https://mysm.ir",
+    "shot": "mysm.png"
+  },
+  {
+    "title": "Personal Website",
+    "description": "a personal website for sharing projects and some fun things",
+    "tec": "Vue, Nuxt, TypeScript, Tailwind, Pinia",
+    "live": "https://mysm.ir",
+    "shot": "mysm.png"
+  }
+]

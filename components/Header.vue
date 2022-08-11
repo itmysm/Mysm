@@ -25,14 +25,20 @@
       "
     >
       <div class="flex-1 lg:flex-none px-0">
-         <nuxt-link class="text-primary-content text-lg font-bold" to='/'>Mysm</nuxt-link>
+        <nuxt-link class="text-primary-content text-lg font-bold" to="/"
+          >Mysm</nuxt-link
+        >
       </div>
       <div class="flex justify-end px-0 text-xs h-full">
         <div class="flex items-center h-full">
           <ul class="flex items-center capitalize hidden lg:flex font-semibold">
             <li class="ml-6">
-               <nuxt-link class="text-primary-content text-sm hover:text-info" to='/blog'>blog</nuxt-link>
-            </li> 
+              <nuxt-link
+                class="text-primary-content text-sm hover:text-info"
+                to="/blog"
+                >blog</nuxt-link
+              >
+            </li>
             <li class="ml-6">
               <commonDropdown
                 class="text-neutral hover:text-neutral-focus"
@@ -40,7 +46,11 @@
               />
             </li>
             <li class="ml-6">
-              <nuxt-link class="text-primary-content text-sm hover:text-info" to='/me'>about me</nuxt-link>
+              <nuxt-link
+                class="text-primary-content text-sm hover:text-info"
+                to="/me"
+                >about me</nuxt-link
+              >
             </li>
           </ul>
 
@@ -116,16 +126,6 @@ const desktopMenuDropdown = shallowReactive({
     {
       name: "Graph",
       icon: icons.statisticUp,
-      path: "/tools/graph",
-    },
-    {
-      name: "Idk",
-      icon: icons.telescope,
-      path: "/tools/graph",
-    },
-    {
-      name: "undefined",
-      icon: icons.sparkles,
       path: "/tools/graph",
     },
     {

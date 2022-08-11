@@ -57,17 +57,22 @@ const icons = {
   person: Person,
   info: Info,
   star: Star,
-  ascending: Ascending
+  ascending: Ascending,
 };
 provide("icons", icons);
 
 onMounted(() => {
   if (!localStorage.getItem("theme")) {
     window.matchMedia("(prefers-color-scheme: dark)").matches
-      ? document.querySelector("body").setAttribute("data-theme", "dark")
+      ? document.querySelector("body").setAttribute("data-theme", "light")
       : document.querySelector("body").setAttribute("data-theme", "light");
     localStorage.setItem("theme", "default");
   }
 });
-
 </script>
+
+<style>
+body {
+  scroll-behavior: smooth;
+}
+</style>
