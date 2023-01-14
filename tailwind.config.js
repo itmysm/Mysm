@@ -3,14 +3,25 @@
 
 module.exports = {
   content: [
-    "./src/components/**/*.{vue,js}",
-    "./src/layouts/**/*.vue",
-    "./src/pages/**/*.vue",
-    "./src/pages/*.vue",
-    "./src/plugins/**/*.{js,ts}",
-    "./src/*.vue"
+     './src/*.{vue,html,js}',
+    './src/pages/**/*.{vue,html,js}',
+    './src/components/**/*.{vue,html,js}',
   ],
   theme: {
+    colors: {
+      'light': {
+        'primary': '#007bff',
+        'secondary': '#6c757d',
+        'background': '#fff',
+        'text': '#212529',
+      },
+      'dark': {
+        'primary': '#222',
+        'secondary': '#6c757d',
+        'background': '#000',
+        'text': '#fff',
+      }
+    },
     extend: {},
 
     fontFamily: {
@@ -19,12 +30,9 @@ module.exports = {
       persian: ['Vazirmatn']
     }
   },
+
   plugins: [],
   variants: {
     extend: {}
   },
-
-  daisyui: {
-    styled: true,
-  }
 }
