@@ -20,10 +20,17 @@ onMounted(() => {
     const appearance = JSON.parse(localStorage.getItem('appearance'))
     body.setAttribute('theme', appearance.theme)
     themeSwitcher(appearance.theme)
+    setFontFamily(appearance.language)
   }else {
     setBrowserInfo()
     setAppearance() // Set a default appearance(theme, language..)
     themeSwitcher('auto')
   }
 })
+
+
+function setFontFamily (lang) {
+  if (lang.direction == 'ltr') document.body.classList.add('font-main')
+  else document.body.classList.add('font-persian')
+}
 </script>

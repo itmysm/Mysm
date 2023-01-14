@@ -7,7 +7,7 @@ interface Appearance {
 
 function setAppearance (newAppearance: Appearance) {
   let appearance: Appearance = newAppearance || {
-    language: {language: 'en', direction: 'ltr'},
+    language: {lang: 'en', direction: 'ltr'},
     theme: 'auto',
     register: new Date().getTime()
   }
