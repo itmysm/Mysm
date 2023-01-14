@@ -1,5 +1,5 @@
 interface Appearance {
-  language: string;
+  language: object;
   theme: string;
   register: string;
 }
@@ -7,7 +7,7 @@ interface Appearance {
 
 function setAppearance (newAppearance: Appearance) {
   let appearance: Appearance = newAppearance || {
-    language: navigator.language,
+    language: {language: 'en', direction: 'ltr'},
     theme: 'auto',
     register: new Date().getTime()
   }
