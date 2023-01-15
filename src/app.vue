@@ -1,7 +1,6 @@
 <template>
-  <div class="th w-full">
-    <h1 class="bg-light-primary">{{ $t('hello', { name: 'vue-i18n' }) }}</h1>
-    <AnimationsCircleLoading />
+  <div class="th w-full min-h-full bg-light-main">
+    <ChatPage />
   </div>
 </template>
 
@@ -9,7 +8,6 @@
 import setBrowserInfo from './utils/register/browser-info.ts'
 import setAppearance from './utils/register/appearance.ts'
 import themeSwitcher from './utils/interface/theme-switcher';
-
 
 const registeredUser = ref()
 
@@ -31,6 +29,7 @@ onMounted(() => {
 
 
 function setFontFamily (lang) {
+  themeSwitcher('dark')
   if (lang.direction == 'ltr') document.body.classList.add('font-main')
   else document.body.classList.add('font-persian')
 }

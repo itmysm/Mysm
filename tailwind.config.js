@@ -23,11 +23,12 @@ module.exports = {
         'client-content': '#000',
         'content-hover': 'rgba(79,174,78,0.55)',
         'element': '#3390ec',
-        'element-unselect': '#fff'
+        'element-unselect': '#fff',
+        'opposite': '#000'
       },
       'dark': {
-        'main': '#212121',
         'main-hover': '#2c2c2c',
+        'main': '#212121',
         'primary': '#766ac8',
         'secondary': '#eeffde',
         'secondary-content': '#000',
@@ -39,8 +40,19 @@ module.exports = {
         'client-content': '#fff',
         'content-hover': 'rgba(0,0,0,0.6)',
         'element': '#fff',
-        'element-unselect': '#222'
+        'element-unselect': '#222',
+        'opposite': '#fff',
       }
+    },
+    backgroundSize: {
+      'auto': 'auto',
+      'cover': 'cover',
+      'contain': 'contain',
+      '30': '30%',
+      '40': '40%',
+      '70': '70%',
+      '100': '100%',
+      '16': '16px',
     },
     extend: {},
 
