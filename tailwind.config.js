@@ -12,6 +12,7 @@ module.exports = {
       'light': {
         'main': '#fff',
         'main-hover': '#f4f4f5',
+        'primary': '#3390ec',
         'secondary': '#eeffde',
         'secondary-content': '#000',
         'link': '#3390ec',
@@ -20,11 +21,14 @@ module.exports = {
         'system-content': '#000',
         'client': '#eeffde',
         'client-content': '#000',
-        'content-hover': 'rgba(79,174,78,0.55)'
+        'content-hover': 'rgba(79,174,78,0.55)',
+        'element': '#3390ec',
+        'element-unselect': '#fff'
       },
       'dark': {
         'main': '#212121',
         'main-hover': '#2c2c2c',
+        'primary': '#766ac8',
         'secondary': '#eeffde',
         'secondary-content': '#000',
         'link': '#3390ec',
@@ -33,7 +37,9 @@ module.exports = {
         'system-content': '#fff',
         'client': '#766ac8',
         'client-content': '#fff',
-        'content-hover': 'rgba(0,0,0,0.6)'
+        'content-hover': 'rgba(0,0,0,0.6)',
+        'element': '#fff',
+        'element-unselect': '#222'
       }
     },
     extend: {},

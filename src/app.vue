@@ -1,6 +1,7 @@
 <template>
-  <div class="th w-full bg-light-primary">
-    <h1>{{ $t('hello', { name: 'vue-i18n' }) }}</h1>
+  <div class="th w-full">
+    <h1 class="bg-light-primary">{{ $t('hello', { name: 'vue-i18n' }) }}</h1>
+    <AnimationsCircleLoading />
   </div>
 </template>
 
