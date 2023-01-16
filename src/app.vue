@@ -9,8 +9,8 @@ import setBrowserInfo from './utils/register/browser-info.ts'
 import setAppearance from './utils/register/appearance.ts'
 import themeSwitcher from './utils/interface/theme-switcher';
 
-const registeredUser = ref()
 
+const registeredUser = ref()
 onMounted(() => {
   registeredUser.value = localStorage.getItem('browserInfo') ? 1 : 0 // check user is registered or not
   const body = document.querySelector('body')
@@ -29,7 +29,6 @@ onMounted(() => {
 
 
 function setFontFamily (lang) {
-  themeSwitcher('dark')
   if (lang.direction == 'ltr') document.body.classList.add('font-main')
   else document.body.classList.add('font-persian')
 }

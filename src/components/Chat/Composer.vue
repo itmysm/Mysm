@@ -17,7 +17,6 @@
 </template>
 
 <script setup>
-
 function autoGrow() {
   const inp = document.querySelector('#sendMsg')
   inp.style.height = '5px'

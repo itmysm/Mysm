@@ -7,7 +7,7 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-  
+  modules: ['nuxt-icon'],
   css: ["~/assets/styles/css/tailwind.css"],
   
   vite: {
