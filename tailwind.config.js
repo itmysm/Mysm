@@ -25,7 +25,8 @@ module.exports = {
         'content-hover': 'rgba(79,174,78,0.55)',
         'element': '#3390ec',
         'element-unselect': '#fff',
-        'opposite': '#000'
+        'opposite': '#000',
+        'gray': '#707579',
       },
       'dark': {
         'main-hover': '#2c2c2c',
@@ -43,6 +44,7 @@ module.exports = {
         'element': '#fff',
         'element-unselect': '#222',
         'opposite': '#fff',
+        'gray': '#aaa',
       }
     },
     backgroundSize: {

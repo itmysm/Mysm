@@ -1,5 +1,5 @@
 <template>
-  <div class="th w-full min-h-full bg-light-main">
+  <div class="th w-full h-[100vh] bg-light-main overflow-y-hidden">
     <ChatPage />
   </div>
 </template>
