@@ -1,6 +1,6 @@
 <template>
   <button
-    class="th group w-[50px] h-[50px] md:w-[60px] md:h-[60px] rounded-full bg-light-main flex items-center justify-center relative hover:bg-light-primary transition-all">
+    class="th group min-w-[50px] min-h-[50px] md:w-[60px] md:h-[60px] rounded-full bg-light-main flex items-center justify-center relative hover:bg-light-primary transition-all">
     
     <a class="to-center rotate-45 translate-x-[-60%] translate-y-[-50%]">
       <Icon name="ri:send-plane-fill" class="th text-2xl lg:text-3xl text-light-primary relative group-hover:text-light-main" :class="active ? 'animate-fadeIn' : 'animate-fadeOut'"/>

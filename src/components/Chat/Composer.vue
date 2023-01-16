@@ -1,29 +1,37 @@
 <template>
-  <div class="absolute flex bottom-5 left-[50%] translate-x-[-50%] w-full flex justify-center items-end px-3"
-    placeholder="Message">
-
-    <div class="th flex w-full max-w-[600px] items-end bg-light-main rounded-xl rounded-br-none px-3 py-3 lg:py-4 relative">
-      <UIChatCommendBtn />
-      <textarea id="sendMsg"
-        class="th w-full mx-3 border-none focus:outline-none text-lg text-light-opposite resize-none overflow-hidden min-h-[5px] h-[28px] max-h-[100px] bg-[transparent] relative top-[-1px] md:top-[0px]"
-        autofocus placeholder="Message" tabindex="0" dir="auto" @input="autoGrow" />
+  <div class="absolute flex bottom-5 left-[50%] translate-x-[-50%] w-full flex justify-center items-end px-3">
+    <div id="input" class="th w-full max-w-[600px] bg-light-main rounded-xl px-3 py-3 lg:py-4 transition-all" :class="commendBtn ? 'rounded-t-none' : ''">
+      <UIChatCommendBtn class="z-20" :status="commendBtn" @statusHandler="cmdHandler" />
+      <UIChatInput @msgHandler="inputUpdated" :commendBtn="commendBtn" @commendBtnHandler="cmdHandler" />
     </div>
-
-    <UIIconsEdge class="relative top-[3px]" :prop="'#fff'" />
-    <div>
-      <UIChatSendMessageBtn :active="disableSendMsg" />
-    </div>
+  
+    <UIIconsEdge class="relative top-[3px]" />
+    <UIChatSendMessageBtn :active="sendMsgBtn" />
   </div>
 </template>
 
 <script setup>
+const msgValue = ref('')
+const sendMsgBtn = ref(false)
+const commendBtn = ref(false)
 
-const disableSendMsg = ref(false)
-
-function autoGrow(e) {
-  disableSendMsg.value = e.target.value < 1 ? false : true
-  const inp = document.querySelector('#sendMsg')
-  inp.style.height = '5px'
-  inp.style.height = (inp.scrollHeight) + "px";
+function inputUpdated (val) {
+  msgValue.value = val
+  sendMsgBtn.value = val.length < 1 ? false : true
 }
+
+function cmdHandler (status) {
+  commendBtn.value = status
+}
+const disableSendMsg = ref(false)
 </script>
+
+<style>
+#input {
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  border-bottom-right-radius: 0px;
+}
+
+</style>

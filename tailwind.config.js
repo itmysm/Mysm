@@ -61,6 +61,8 @@ module.exports = {
       animation: {
         fadeOut: 'fadeOut .6s ease-in-out both',
         fadeIn: 'fadeIn .6s ease-in-out both',
+        OpenCommendLine: 'OpenCommendLine 1.6s linear both',
+
       },
 
       keyframes: {        
@@ -73,6 +75,11 @@ module.exports = {
           '0%' : { transform: 'scale(0)', opacity: '0%' },
           '50%' : { transform: 'scale(1.1)', opacity: '70%' },
           '100%': { transform: 'rotate(1)', opacity: '100%'},
+        },
+        OpenCommendLine: {
+          '0%' : { 'height': '0px', opacity: '0%' },
+          '50%' : { 'height': 'fit-content', opacity: '100%' },
+          '100%' : { 'height': 'fit-content', opacity: '100%' }
         }
       }
     },
