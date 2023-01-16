@@ -9,15 +9,18 @@
     </div>
 
     <UIIconsEdge class="relative top-[3px]" :prop="'#fff'" />
-
     <div>
-      <UIChatSendMessageBtn />
+      <UIChatSendMessageBtn :active="disableSendMsg" />
     </div>
   </div>
 </template>
 
 <script setup>
-function autoGrow() {
+
+const disableSendMsg = ref(false)
+
+function autoGrow(e) {
+  disableSendMsg.value = e.target.value < 1 ? false : true
   const inp = document.querySelector('#sendMsg')
   inp.style.height = '5px'
   inp.style.height = (inp.scrollHeight) + "px";

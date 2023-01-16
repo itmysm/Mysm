@@ -54,7 +54,25 @@ module.exports = {
       '100': '100%',
       '16': '16px',
     },
-    extend: {},
+    extend: {
+      animation: {
+        fadeOut: 'fadeOut .6s ease-in-out both',
+        fadeIn: 'fadeIn .6s ease-in-out both',
+      },
+
+      keyframes: {        
+        fadeOut: {
+          '0%' : { transform: 'scale(1)', opacity: '100%' },
+          '50%' : { transform: 'scale(1.1)', opacity: '70%' },
+          '100%': { transform: 'rotate(0)', opacity: '0%'},
+        },
+        fadeIn: {
+          '0%' : { transform: 'scale(0)', opacity: '0%' },
+          '50%' : { transform: 'scale(1.1)', opacity: '70%' },
+          '100%': { transform: 'rotate(1)', opacity: '100%'},
+        }
+      }
+    },
 
     fontFamily: {
       main: ["Roboto", "Apple Color Emoji", "Segoe UI", 'Oxygen', 'Ubuntu', 'Cantarell', "Fira Sans", "Droid Sans",  'sans-serif'],
@@ -64,6 +82,7 @@ module.exports = {
 
   plugins: [],
   variants: {
-    extend: {}
+    extend: {
+    }
   },
 }
