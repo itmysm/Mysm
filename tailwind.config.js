@@ -9,6 +9,7 @@ module.exports = {
   ],
   theme: {
     colors: {
+      white: '#fff',
       'light': {
         'main': '#fff',
         'main-hover': '#f4f4f5',
