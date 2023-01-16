@@ -17,13 +17,8 @@
 </template>
 
 <script setup>
-import tailwindConfig from '~/tailwind.config.js';
-import colorFinder from '../../utils/detectors/colorFinderByClass.ts'
-
 
 function autoGrow() {
-  
-  colorFinder(tailwindConfig)
   const inp = document.querySelector('#sendMsg')
   inp.style.height = '5px'
   inp.style.height = (inp.scrollHeight) + "px";
