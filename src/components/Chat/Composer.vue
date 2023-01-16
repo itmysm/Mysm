@@ -2,9 +2,10 @@
   <div class="absolute flex bottom-5 left-[50%] translate-x-[-50%] w-full flex justify-center items-end px-3"
     placeholder="Message">
 
-    <div class="th flex w-full max-w-[600px] items-end bg-light-main rounded-xl rounded-br-none px-2 py-3 lg:py-4">
+    <div class="th flex w-full max-w-[600px] items-end bg-light-main rounded-xl rounded-br-none px-3 py-3 lg:py-4 relative">
+      <UIChatCommendBtn />
       <textarea id="sendMsg"
-        class="th w-full mx-3 border-none focus:outline-none text-lg text-light-opposite resize-none overflow-hidden min-h-[5px] h-[28px] max-h-[100px] bg-[transparent]"
+        class="th w-full mx-3 border-none focus:outline-none text-lg text-light-opposite resize-none overflow-hidden min-h-[5px] h-[28px] max-h-[100px] bg-[transparent] relative top-[-1px] md:top-[0px]"
         autofocus placeholder="Message" tabindex="0" dir="auto" @input="autoGrow" />
     </div>
 
