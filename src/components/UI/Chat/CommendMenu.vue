@@ -7,7 +7,7 @@
     <ul class="bg-light-main mt-2">
       <li
         class="w-full flex justify-between text-sm md:text-base px-3 md:px-4 py-1 hover:bg-light-primary cursor-pointer hover:text-light-main"
-        @click="" v-for="(commend, key) in commendsStore.showCommends" :key="index">
+        v-for="(commend, key) in commends" :key="key">
         <p>{{commend}}</p>
         <p>/{{ key }}</p>
       </li>
@@ -22,11 +22,20 @@ const emit = defineEmits(['updateBtnStatus'])
 const props = defineProps({
   status: {
     require: false
+  },
+
+  message: {
+    default: ''
   }
+
 })
 
 const commendsStore = useCommends()
+let commends = reactive(commendsStore.showCommends)
 
+watch(() => props.message, (newMsg) => {
+  commends = useCommends().filterCommends(newMsg)
+})
 </script>
 
 <style>
