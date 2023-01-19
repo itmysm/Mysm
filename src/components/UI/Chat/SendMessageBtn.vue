@@ -3,11 +3,11 @@
     class="th group min-w-[50px] min-h-[50px] md:w-[60px] md:h-[60px] rounded-full bg-light-main flex items-center justify-center relative hover:bg-light-primary transition-all">
     
     <a class="to-center rotate-45 translate-x-[-60%] translate-y-[-50%]">
-      <Icon name="ri:send-plane-fill" class="th text-2xl lg:text-3xl text-light-primary relative group-hover:text-light-main" :class="active ? 'animate-fadeIn' : 'animate-fadeOut'"/>
+      <Icon name="ri:send-plane-fill" class="th text-2xl lg:text-[27px] text-light-primary relative group-hover:text-light-main" :class="active ? 'animate-fadeIn' : 'animate-fadeOut'"/>
     </a>
 
     <a class="to-center translate-x-[-50%] translate-y-[-50%]">
-      <Icon name="ph:microphone-bold" class="th text-2xl lg:text-3xl text-light-primary relative group-hover:text-light-main" :class="active ? 'animate-fadeOut' : 'animate-fadeIn'" />
+      <Icon name="icon-park-outline:microphone" class="th text-2xl lg:text-[27px] text-light-primary relative group-hover:text-light-main" :class="active ? 'animate-fadeOut' : 'animate-fadeIn'" />
     </a>
   </button>
 </template>

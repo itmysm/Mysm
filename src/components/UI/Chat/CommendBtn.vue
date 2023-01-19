@@ -1,9 +1,9 @@
 <template>
   <button class="th relative transition-all relative" @click="changeStatus">
-    <Icon name="bi:slash-square"
+    <Icon name="teenyicons:terminal-outline"
       class="th text-[28px] lg:text-2xl h-[28px] text-[#b7aaaa]" v-show="!status" />
       
-      <Icon name="bi:slash-square-fill"
+      <Icon name="teenyicons:terminal-solid"
       class="th text-[28px] lg:text-2xl h-[28px] text-light-primary" v-show="status" />
   </button>
 </template>
