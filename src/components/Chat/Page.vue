@@ -1,6 +1,6 @@
 <template>
   <section class="th bg-light-gradient pattern h-[100vh]">
-    <div class="th h-[100vh] bg-light-pattern bg-repeat bg-100 md:bg-70 lg:bg-30 w-full relative">
+    <div class="th h-[100vh] bg-light-pattern bg-repeat bg-100 md:bg-70 lg:bg-60 xl:bg-50 2xl:bg-40 w-full relative">
       
       <ChatMiddleHeader />
       <ChatComposer />

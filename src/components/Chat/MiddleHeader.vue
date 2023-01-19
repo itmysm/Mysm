@@ -1,13 +1,17 @@
 <template>
   <div class="w-full flex justify-center">
-    <div class="th w-full max-w-[670px] h-[70px] md:-[60px] bg-light-main flex justify-between py-2 px-4 md:px-3 md:px-5">
+    <div class="th w-full xl:max-w-[670px] h-[70px] bg-light-main flex justify-between py-2 px-4 md:px-3 md:px-5">
     <div class="flex items-center">
-      <p class="w-[43px] h-[43px] bg-light-primary rounded-full overflow-hidden">
+      <p class="w-[43px] h-[43px] xl:w-[48px] xl:h-[48px] bg-light-primary rounded-full overflow-hidden">
         <img src="../../assets/media/profiles/x6x32gfrIO.JPG" class="max-w-[150%] left-[-13px] bottom-[9px] relative" alt="">
       </p>
       <div class="ml-3">
         <h2 class="font-bold">{{ name }}</h2>
-        <p class="mb-0 text-sm font-semibold text-light-gray">{{status}}</p>
+
+        <div class="flex items-center text-sm text-light-gray/[.9] font-semibold select-none">
+          <Icon class="text-[18px] mr-1" name="la:robot" />
+          <p>{{status}}</p>
+        </div>
       </div>
     </div>
     <div id="rightSideMenus" class="flex items-center select-none">
