@@ -27,6 +27,9 @@ module.exports = {
         'element-unselect': '#fff',
         'opposite': '#000',
         'gray': '#707579',
+        'actions': 'rgba(255, 255, 255, .7)',
+        'error': '#e11d48'
+
       },
       'dark': {
         'main-hover': '#2c2c2c',
