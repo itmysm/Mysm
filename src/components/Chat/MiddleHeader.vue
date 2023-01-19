@@ -1,6 +1,6 @@
 <template>
   <div class="w-full flex justify-center">
-    <div class="th w-full max-w-[670px] h-[60px] bg-light-main flex justify-between py-2 px-3 md:px-5">
+    <div class="th w-full max-w-[670px] h-[70px] md:-[60px] bg-light-main flex justify-between py-2 px-4 md:px-3 md:px-5">
     <div class="flex items-center">
       <p class="w-[43px] h-[43px] bg-light-primary rounded-full overflow-hidden">
         <img src="../../assets/media/profiles/x6x32gfrIO.JPG" class="max-w-[150%] left-[-13px] bottom-[9px] relative" alt="">
@@ -17,7 +17,7 @@
       <button class="flex items-center justify-center w-[40px] h-[40px] hover:bg-light-gray/[10%] rounded-full" :class="showActions ? 'bg-light-gray/[10%]' : 'bg-light-gray/[0]'" @click="showActions = !showActions">
         <Icon name="mi:options-vertical" class="text-[24px] text-light-gray absolute"/>
 
-        <UICommonActions @getAction="receiveAction" :actions="actions" :class="showActions ? 'scale-1' : 'scale-0 opacity-0'" />
+        <UICommonActions class="mr-6 mt-5" @getAction="receiveAction" :actions="actions" :class="showActions ? 'scale-1' : 'scale-0 opacity-0'" />
       </button>
     </div>
   </div>
