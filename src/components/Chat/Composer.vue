@@ -18,6 +18,11 @@ const commendBtn = ref(false)
 function inputUpdated (val) {
   msgValue.value = val
   sendMsgBtn.value = val.length < 1 ? false : true
+  if (msgValue.value[0] == '/') {
+    commendBtn.value = true
+  } else {
+    commendBtn.value = false
+  }
 }
 
 function cmdHandler (status) {

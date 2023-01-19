@@ -1,6 +1,6 @@
 <template>
-  <div class="w-full bg-light-main overflow-hidden rounded-t-xl pt-4 select-none"
-    :class="status ? 'openCMD' : 'closeCMD'">
+  <div class="w-full bg-light-main overflow-hidden rounded-t-xl pt-4 select-none transition duration-200 ease-linear"
+    :class="status && show ? 'translate-y-0 opacity-1' : 'translate-y-[10em] opacity-0'">
 
     <span class="w-[28px] h-[6px] rounded-full bg-light-gray/50 absolute top-2 left-[50%]"></span>
 
@@ -27,44 +27,19 @@ const props = defineProps({
   message: {
     default: ''
   }
-
 })
+
+const show = ref(false)
 
 const commendsStore = useCommends()
 let commends = reactive(commendsStore.showCommends)
 
 watch(() => props.message, (newMsg) => {
   commends = useCommends().filterCommends(newMsg)
+  if (JSON.stringify(commends) == '{}' && newMsg.length > 0) show.value = false
+  else show.value = true
 })
 </script>
 
 <style>
-.openCMD {
-  animation: openCMD .2s linear both;
-}
-
-.closeCMD {
-  animation: closeCMD .2s linear both;
-}
-
-@keyframes openCMD {
-  0% {
-    transform: translateY(100%);
-  }
-
-  100% {
-    transform: translateY(0px);
-  }
-}
-
-@keyframes closeCMD {
-  0% {
-    transform: translateY(0px);
-  }
-
-  100% {
-    transform: translateY(100%);
-    opacity: 0;
-  }
-}
 </style>
