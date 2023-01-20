@@ -9,7 +9,7 @@
       </div>
 
       <div class="relative ml-2">
-        <UICommonTooltip class="bottom-[60px] right-8" :class="tooltip ? 'translate-y-1 opacity-1' : 'translate-y-5 opacity-0'" :msg="'Im still working on this feature, it may take some time to prepare'" />
+        <UICommonTooltip class="bottom-[70px] lg:bottom-20 right-8" :class="tooltip ? 'translate-y-1 opacity-1 visible' : 'translate-y-5 opacity-0 invisible'" :msg="'Im still working on this feature, it may take some time to prepare'" />
         <UIChatSendMessageBtn @statusHandler="responseSendMsgComponent" :active="sendMsgBtn" />
       </div>
     </div>
