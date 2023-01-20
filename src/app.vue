@@ -33,3 +33,8 @@ function setFontFamily (lang) {
   else document.body.classList.add('font-persian')
 }
 </script>
+
+
+<style>
+@import './assets/styles/css/main.css';
+</style>

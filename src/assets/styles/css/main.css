@@ -1,1 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Ubuntu&family=Vazirmatn&display=swap');
+
+
+
+
+
+button:focus, button:focus-visible {
+  outline: none !important;
+}
