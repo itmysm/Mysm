@@ -1,12 +1,18 @@
 <template>
-  <div class="absolute flex bottom-5 left-[50%] translate-x-[-50%] w-full flex justify-center items-end px-3">
-    <div id="input" class="th w-full max-w-[600px] bg-light-main rounded-xl px-3 py-3 lg:py-4 transition-all" :class="commendBtn ? 'rounded-t-none' : ''">
-      <UIChatCommendBtn class="z-20" :status="commendBtn" @statusHandler="cmdHandler" />
-      <UIChatInput @msgHandler="inputUpdated" @commendHandler="runCommend(keyCommend)" :commendBtn="commendBtn" />
+  <div class="flex justify-center">
+
+    <div class="flex justify-center items-end w-full px-3">
+      <div id="input" class="th w-full max-w-[600px] h-fit bg-light-main rounded-xl px-3 py-3 lg:py-4 edge-light"
+        :class="commendBtn ? 'rounded-t-none' : ''">
+        <UIChatCommendBtn class="mr-3 md:mr-4 z-20" :status="commendBtn" @statusHandler="cmdHandler" />
+        <UIChatInput @msgHandler="inputUpdated" @commendHandler="runCommend(keyCommend)" :commendBtn="commendBtn" />
+      </div>
+
+      <div class="relative ml-2">
+        <UICommonTooltip class="bottom-[60px] right-8" :class="tooltip ? 'translate-y-1 opacity-1' : 'translate-y-5 opacity-0'" :msg="'Im still working on this feature, it may take some time to prepare'" />
+        <UIChatSendMessageBtn @statusHandler="responseSendMsgComponent" :active="sendMsgBtn" />
+      </div>
     </div>
-  
-    <UIIconsEdge class="relative top-[3px] right-[2px]" />
-    <UIChatSendMessageBtn :active="sendMsgBtn" />
   </div>
 </template>
 
@@ -14,10 +20,11 @@
 const msgValue = ref('')
 const sendMsgBtn = ref(false)
 const commendBtn = ref(false)
+const tooltip = ref(false)
 
-function inputUpdated (val) {
+function inputUpdated(val) {
   sendMsgBtn.value = val.length < 1 ? false : true
-  
+
   if (val.length > 0 && val[0] == '/') {
     msgValue.value = val
     commendBtn.value = true
@@ -26,12 +33,23 @@ function inputUpdated (val) {
   }
 }
 
-function cmdHandler (status) {
+function cmdHandler(status) {
   commendBtn.value = status
 }
 
-function runCommend (keyCommend) {
+function runCommend(keyCommend) {
   // do something
+}
+
+
+function responseSendMsgComponent (mode) {
+  tooltip.value = mode == 'microphoneMode' ? true : false
+
+  if (tooltip.value) {
+    setTimeout(() => {
+      tooltip.value = false
+    }, 3000);
+  }
 }
 </script>
 
@@ -43,4 +61,21 @@ function runCommend (keyCommend) {
   border-bottom-right-radius: 0px;
 }
 
+#input::before {
+  position: absolute;
+  height: 20px;
+  width: 9px;
+  right: -8px;
+  bottom: -3px;
+  display: block;
+  content: '';
+}
+
+.edge-light::before {
+  background-image: url(../../assets/media/icons/edge-light.png);
+}
+
+.edge-dark::before {
+  background-image: url(../../assets/media/icons/edge-dark.png);
+}
 </style>

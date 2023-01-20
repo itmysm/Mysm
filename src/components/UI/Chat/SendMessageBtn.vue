@@ -1,6 +1,7 @@
 <template>
   <button
-    class="th group min-w-[50px] min-h-[50px] md:w-[60px] md:h-[60px] rounded-full bg-light-main flex items-center justify-center relative hover:bg-light-primary transition-all">
+    class="th group w-[50px] h-[50px] md:w-[60px] md:h-[60px] rounded-full bg-light-main flex items-center justify-center relative hover:bg-light-primary"
+    @click="sendResponseToParent">
     
     <a class="to-center rotate-45 translate-x-[-60%] translate-y-[-50%]">
       <Icon name="ri:send-plane-fill" class="th text-2xl lg:text-[27px] text-light-primary relative group-hover:text-light-main" :class="active ? 'animate-fadeIn' : 'animate-fadeOut'"/>
@@ -13,11 +14,17 @@
 </template>
 
 <script setup>
+const emits = defineEmits(['statusHandler'])
 const props = defineProps({
   active: {
     default: true
   }
 })
+
+function sendResponseToParent () {
+  emits('statusHandler', props.active ? 'sendMode' : 'microphoneMode')
+}
+
 </script>
 
 

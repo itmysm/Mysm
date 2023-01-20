@@ -9,6 +9,7 @@
 </template>
 
 <script setup>
+const emit = defineEmits(['statusHandler'])
 const props = defineProps({
   status: {
     default: false,
@@ -16,7 +17,6 @@ const props = defineProps({
   }
 })
 
-const emit = defineEmits(['statusHandler'])
 
 function changeStatus () {
   const btnStatus = !props.status

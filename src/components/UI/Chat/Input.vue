@@ -1,6 +1,6 @@
 <template>
   <UIChatCommendMenu class="w-full absolute bottom-[100%] left-0" :status="commendBtn" :message="message" @commendRunner="commendHandler" />
-  <textarea id="sendMsg" class="th w-full mx-3 text-lg text-light-opposite h-[28px] max-h-[100px] top-[-1px] md:top-[0px]" autofocus placeholder="Message" dir="auto" @input="autoGrow" v-model="message" />
+  <textarea id="sendMsg" class="th w-full text-lg text-light-opposite h-[28px] max-h-[100px] top-[-1px] md:top-[0px]" autofocus placeholder="Message" dir="auto" @input="autoGrow" v-model="message" />
 </template>
 
 <script setup>
