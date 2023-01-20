@@ -21,7 +21,7 @@ import { useCommends } from '../../../stores/commends/index.ts'
 const emit = defineEmits(['updateBtnStatus', 'commendRunner'])
 const props = defineProps({
   status: {
-    require: false
+    require: true
   },
 
   message: {
@@ -31,12 +31,17 @@ const props = defineProps({
 
 const commendsStore = useCommends()
 let commends = reactive(commendsStore.showCommends)
-const showCommendMenu = ref(false)
+const showCommendMenu = ref(props.status)
+console.log(showCommendMenu.value, props.status);
 
 watch(() => props.message, (newMsg) => {
   commends = useCommends().filterCommends(newMsg)
   if (JSON.stringify(commends) == '{}' && newMsg.length > 0) showCommendMenu.value = false
   else showCommendMenu.value = true
+})
+
+watch(() => props.status, (newStatus) => {
+  showCommendMenu.value = newStatus
 })
 
 function selectedCommend (keyCommend) {
