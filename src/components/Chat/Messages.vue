@@ -1,38 +1,22 @@
 <template>
   <div class="flex flex-col h-full">
 
-    <ul class="flex flex-col justify-end items-center h-full mb-5">
-      <span class="w-fit bg-light-primary px-2 py-1 rounded-full text-sm font-semibold bg-light-info-content/75 text-light-main">Today</span>
-      <UIChatMessage v-for="(message, index) in messages" :key="index" :message="message"  />
+    <ul class="flex flex-col justify-end items-center h-full mb-5" v-for="messages in allMessages">
+      <span
+        class="w-fit bg-light-primary px-2 py-1 rounded-full text-sm font-semibold bg-light-info-content/75 text-light-main">Today</span>
+      <UIChatMessage v-for="(message) in messages" :message="message"/>
     </ul>
   </div>
 </template>
 
 
 <script setup>
+import { useMessages } from '../../stores/messages/index.ts';
+const allMessages = ref(null)
 
-const messages = [
-  {
-    type: 1,
-    text: '.',
-    date: new Date().getDate(),
-    time: new Date().getHours(),
-  },
-
-  {
-    type: 0,
-    text: 'Hi Im Meysam',
-    date: new Date().getDate(),
-    time: new Date().getHours(),
-  },
-
-  {
-    type: 1,
-    text: 'Oooweiuryweqiuryiuwqyiqyuriuowqyriouqyirouyqioruyqiwyiouwqyriouqywioruyqiworyuiywiuqywriouyquwriouqywroywqriuoqywioruyqwiuryiuwqyriuowqyroiuwqyoo',
-    date: new Date().getDate(),
-    time: new Date().getHours(),
-  }
-]
+onMounted(() => {
+  allMessages.value = useMessages().$state.messages
+})
 </script>
 
 <style>

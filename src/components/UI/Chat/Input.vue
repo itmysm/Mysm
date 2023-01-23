@@ -27,7 +27,8 @@ function autoGrow() {
 }
 
 function commendHandler(commend) {
-  useMessages().addNewMessage(commend, 1, '/')
+  let cm = '/' + commend
+  useMessages().addNewMessage(cm, 1, '/')
 
   emit('commendHandler', commend)
   emit('msgHandler', '') // change send Icon to microphone Icon in composer
