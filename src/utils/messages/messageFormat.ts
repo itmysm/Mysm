@@ -7,12 +7,10 @@ function formatter (message: string, from: number, type: string = 'normal') {
     date: getUTC().date, // return dates like 2022-01-23
     time: getUTC().time, // return hours like 23:11:34s
     date_unix: new Date().getTime(),
-    message: [
-      {
-       "type": "IDK",
-       "text": message,
-      }
-     ]
+    message:  {
+      "type": "IDK",
+      "text": message,
+    }
   }
 }
 
