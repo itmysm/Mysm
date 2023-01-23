@@ -1,7 +1,7 @@
 import patterns from '../main'
 
-function checkMessage(msg: string) {
-    console.log(patterns.notEmpty.test(msg));
+function checkMessage(msg: string): boolean {
+  return patterns.notEmpty.test(msg)
 }
 
 export default checkMessage
