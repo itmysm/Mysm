@@ -1,15 +1,15 @@
 <template>
-  <div class="w-full bg-light-main overflow-hidden rounded-t-xl pt-4 select-none transition duration-200 ease-linear"
+  <div class="th w-full bg-light-main overflow-hidden rounded-t-xl pt-4 select-none transition duration-200 ease-linear"
     :class="status && showCommendMenu ? 'translate-y-0 opacity-1' : 'translate-y-[10em] opacity-0'">
 
     <span class="w-[28px] h-[6px] rounded-full bg-light-gray/50 absolute top-2 left-[50%]"></span>
 
-    <ul class="bg-light-main mt-2">
+    <ul class="mt-2">
       <li
-        class="w-full flex justify-between text-sm md:text-base px-3 md:px-4 py-1 hover:bg-light-primary cursor-pointer hover:text-light-main"
+        class="group w-full flex justify-between text-sm md:text-base px-3 md:px-4 py-1 hover:bg-light-primary cursor-pointer hover:text-light-main"
         v-for="(commend, key) in commends" :key="key" @click="selectedCommend(key)">
         <p>{{commend}}</p>
-        <p class="text-light-gray">/{{ key }}</p>
+        <p class="text-light-gray group-hover:text-light-main">/{{ key }}</p>
       </li>
     </ul>
   </div>

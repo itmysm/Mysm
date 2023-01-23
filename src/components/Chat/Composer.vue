@@ -1,6 +1,5 @@
 <template>
-  <div class="flex justify-center">
-
+  <div class="flex justify-center mb-5">
     <div class="flex justify-center items-end w-full px-3">
       <div id="input" class="th w-full max-w-[600px] h-fit bg-light-main rounded-xl px-3 py-3 lg:py-4 edge-light"
         :class="commendBtn ? 'rounded-t-none' : ''">
