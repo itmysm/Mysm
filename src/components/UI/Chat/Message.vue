@@ -1,5 +1,5 @@
 <template>
-  <li class="w-full flex justify-center bg-light mt-3">
+  <li class="w-full flex justify-center bg-light">
     <div class="w-[670px] max-w-full flex px-5 lg:px-3" :class="message.type ? 'justify-end' : 'justify-start'">
       <p :id="message.from ? 'msgClient' : 'msgSystem'"
         class="w-fit max-w-[70%] bg-light-main rounded-md px-2 py-2 edge-light relative break-words"
