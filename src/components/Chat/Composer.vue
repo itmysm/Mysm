@@ -4,7 +4,7 @@
       <div id="input" class="th w-full max-w-[600px] h-fit bg-light-main rounded-xl px-3 py-3 lg:py-4 edge-light"
         :class="commendBtn ? 'rounded-t-none' : ''">
         <UIChatCommendBtn class="mr-3 md:mr-4 z-20" :status="commendBtn" @statusHandler="cmdHandler" />
-        <UIChatInput @msgHandler="inputUpdated" @commendHandler="runCommend(keyCommend)" :commendBtn="commendBtn" />
+        <UIChatInput @msgHandler="inputUpdated" @commendHandler="runCommend(keyCommend)" :commendBtn="commendBtn" :sendMode='userWantSendMsg'  />
       </div>
 
       <div class="relative ml-2">
@@ -20,6 +20,7 @@ const msgValue = ref('')
 const sendMsgBtn = ref(false)
 const commendBtn = ref(false)
 const tooltip = ref(false)
+const userWantSendMsg = ref(false)
 
 function inputUpdated(val) {
   sendMsgBtn.value = val.length < 1 ? false : true
@@ -48,6 +49,14 @@ function responseSendMsgComponent (mode) {
     setTimeout(() => {
       tooltip.value = false
     }, 3000);
+  }
+
+  if (mode == 'sendMode') {
+    userWantSendMsg.value = true
+
+    setTimeout(() => {
+      userWantSendMsg.value = false
+    }, 100);
   }
 }
 </script>

@@ -12,11 +12,13 @@ const emit = defineEmits(['msgHandler', 'commendHandler'])
 const props = defineProps({
   commendBtn: {
     default: false
+  },
+  sendMode: {
+    require: true
   }
 })
 
 const message = ref('')
-
 
 function autoGrow() {
   emit('msgHandler', message.value)
@@ -34,6 +36,14 @@ function commendHandler(commend) {
   emit('msgHandler', '') // change send Icon to microphone Icon in composer
   message.value = ''
 }
+
+watch(() => props.sendMode, (newVal) => {
+  if (newVal == true) {
+    useMessages().addNewMessage(message.value, 1, '')
+    message.value = ''
+    emit('msgHandler', message.value)
+  }
+})
 </script>
 
 <style>
