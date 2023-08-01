@@ -1,0 +1,86 @@
+@font-face {
+  font-family: 'segoe';
+  src: url('../assets/fonts/Segoe.woff');
+}
+
+[data-theme="dark"] {
+  --theme: #202124;
+  --text-description: #9aa0a6;
+  --text-title: #ffffff;
+  --text-link: #8ab4f8;
+  --icon: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABIAQMAAABvIyEEAAAABlBMVEUAAABTU1OoaSf/AAAAAXRSTlMAQObYZgAAAENJREFUeF7tzbEJACEQRNGBLeAasBCza2lLEGx0CxFGG9hBMDDxRy/72O9FMnIFapGylsu1fgoBdkXfUHLrQgdfrlJN1BdYBjQQm3UAAAAASUVORK5CYII='
+}
+
+[data-theme="light"] {
+  --theme: #fff;
+  --text-description: #5f6368;
+  --text-title: #000000;
+  --text-link: #1a73e8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'segoe';
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-link);
+}
+
+body {
+  background-color: var(--theme);
+}
+
+.main {
+  width: 100vw;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  content: -webkit-image-set(url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABIAQMAAABvIyEEAAAABlBMVEUAAABTU1OoaSf/AAAAAXRSTlMAQObYZgAAAENJREFUeF7tzbEJACEQRNGBLeAasBCza2lLEGx0CxFGG9hBMDDxRy/72O9FMnIFapGylsu1fgoBdkXfUHLrQgdfrlJN1BdYBjQQm3UAAAAASUVORK5CYII=) 1x, url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJAAAACQAQMAAADdiHD7AAAABlBMVEUAAABTU1OoaSf/AAAAAXRSTlMAQObYZgAAAFJJREFUeF7t0cENgDAMQ9FwYgxG6WjpaIzCCAxQxVggFuDiCvlLOeRdHR9yzjncHVoq3npu+wQUrUuJHylSTmBaespJyJQoObUeyxDQb3bEm5Au81c0pSCD8HYAAAAASUVORK5CYII=) 2x);
+  height: 72px;
+  margin: 0 0 40px;
+  width: 72px;
+}
+
+.second_title {
+  color: var(--text-title);
+  text-align: start;
+  margin-bottom: .5em;
+  font-weight: 500;
+}
+
+.solution {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.title_solution {
+  color: var(--text-title);
+  margin-bottom: .5em;
+}
+
+.list_solution {
+  margin-left: 1.7em;
+}
+
+.solutions {
+  margin-bottom: .4em;
+  color: var(--text-description);
+  font-size: .9em;
+  line-height: 1.6em;
+}
+
+.error {
+  margin-top: 1em;
+  text-transform: capitalize;
+  font-size: .9em;
+  color: var(--text-description);
+}
