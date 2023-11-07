@@ -1,3 +1,5 @@
+@import url('./tailwind.css');
+
 @font-face {
   font-family: 'segoe';
   src: url('../assets/fonts/Segoe.woff');
@@ -29,10 +31,12 @@
 
 .light-logo {
   display: var(--light-logo);
+  transform: rotate(180deg);
 }
 
 .dark-logo {
   display: var(--dark-logo);
+  transform: rotate(180deg);
 }
 
 a {
@@ -45,13 +49,7 @@ body {
 }
 
 .main {
-  max-width: 100vw;
-  height: 80vh;
   padding: 0 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .icon {
@@ -73,11 +71,6 @@ body {
   align-items: start;
 }
 
-.title_solution {
-  color: var(--text-title);
-  margin-bottom: .5em;
-}
-
 .list_solution {
   margin-left: 1.7em;
 }
@@ -94,4 +87,8 @@ body {
   text-transform: capitalize;
   font-size: .9em;
   color: var(--text-description);
+}
+
+.projects-section {
+  display: flex;
 }
