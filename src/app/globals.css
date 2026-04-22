@@ -1,0 +1,281 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Jost:wght@300;400;500;600&family=Vazirmatn:wght@300;400;500;600;700&display=swap");
+
+@layer base {
+  :root {
+    --bg-primary: #f0f5ff;
+    --bg-secondary: #e8efff;
+    --bg-card: #ffffff;
+    --bg-card-hover: #f5f8ff;
+    --border: rgba(37, 99, 235, 0.15);
+    --border-strong: rgba(37, 99, 235, 0.3);
+    --accent: #2563eb;
+    --accent-2: #0891b2;
+    --accent-glow: rgba(37, 99, 235, 0.25);
+    --text-primary: #0f172a;
+    --text-secondary: #334155;
+    --text-muted: #64748b;
+    --grid-color: rgba(37, 99, 235, 0.06);
+  }
+
+  .dark {
+    --bg-primary: #02060f;
+    --bg-secondary: #050d1c;
+    --bg-card: #0a1628;
+    --bg-card-hover: #0d1e38;
+    --border: rgba(59, 130, 246, 0.12);
+    --border-strong: rgba(59, 130, 246, 0.3);
+    --accent: #3b82f6;
+    --accent-2: #06b6d4;
+    --accent-glow: rgba(59, 130, 246, 0.35);
+    --text-primary: #e2e8f0;
+    --text-secondary: #94a3b8;
+    --text-muted: #475569;
+    --grid-color: rgba(59, 130, 246, 0.05);
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: "Jost", sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  :lang(fa) body,
+  [dir="rtl"] body,
+  [dir="rtl"] {
+    font-family: "Vazirmatn", sans-serif;
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply max-w-6xl mx-auto px-6 py-24;
+  }
+
+  .section-title {
+    font-family: "Sora", sans-serif;
+    @apply text-3xl md:text-4xl font-bold mb-2;
+    color: var(--text-primary);
+  }
+
+  .section-subtitle {
+    @apply text-base mb-12;
+    color: var(--text-muted);
+  }
+
+  [dir="rtl"] .section-title,
+  [dir="rtl"] .section-subtitle {
+    font-family: "Vazirmatn", sans-serif;
+  }
+
+  .card-base {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    @apply rounded-2xl p-6 transition-all duration-300;
+  }
+
+  .card-base:hover {
+    background: var(--bg-card-hover);
+    border-color: var(--border-strong);
+    box-shadow: 0 0 30px var(--accent-glow);
+    @apply -translate-y-1;
+  }
+
+  .accent-text {
+    color: var(--accent);
+  }
+
+  .accent-text-2 {
+    color: var(--accent-2);
+  }
+
+  .glow-btn {
+    background: var(--accent);
+    box-shadow: 0 0 20px var(--accent-glow);
+    @apply transition-all duration-300;
+  }
+
+  .glow-btn:hover {
+    box-shadow: 0 0 35px var(--accent-glow);
+    @apply scale-105;
+  }
+
+  .bg-grid {
+    background-image: linear-gradient(
+        var(--grid-color) 1px,
+        transparent 1px
+      ),
+      linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  .gradient-heading {
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .tag-chip {
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid var(--border);
+    color: var(--accent);
+    @apply text-xs px-2.5 py-1 rounded-full font-medium;
+  }
+
+  .dark .tag-chip {
+    background: rgba(59, 130, 246, 0.08);
+  }
+
+  .type-badge {
+    @apply text-xs px-2.5 py-1 rounded-full font-semibold;
+  }
+
+  .type-badge-personal {
+    background: rgba(168, 85, 247, 0.1);
+    color: #a855f7;
+    border: 1px solid rgba(168, 85, 247, 0.2);
+  }
+
+  .type-badge-collaboration {
+    background: rgba(34, 197, 94, 0.1);
+    color: #22c55e;
+    border: 1px solid rgba(34, 197, 94, 0.2);
+  }
+
+  .type-badge-freelance {
+    background: rgba(249, 115, 22, 0.1);
+    color: #f97316;
+    border: 1px solid rgba(249, 115, 22, 0.2);
+  }
+
+  .type-badge-on-site {
+    background: rgba(59, 130, 246, 0.1);
+    color: var(--accent);
+    border: 1px solid var(--border-strong);
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--bg-primary);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--border-strong);
+    border-radius: 3px;
+  }
+
+  /* Prose styles for blog */
+  .prose-custom h2 {
+    font-family: "Sora", sans-serif;
+    @apply text-2xl font-bold mt-10 mb-4;
+    color: var(--text-primary);
+  }
+
+  .prose-custom h3 {
+    font-family: "Sora", sans-serif;
+    @apply text-xl font-semibold mt-8 mb-3;
+    color: var(--text-primary);
+  }
+
+  .prose-custom p {
+    @apply leading-8 mb-5;
+    color: var(--text-secondary);
+  }
+
+  .prose-custom ul,
+  .prose-custom ol {
+    @apply ml-6 mb-5 space-y-2;
+    color: var(--text-secondary);
+  }
+
+  .prose-custom li {
+    @apply list-disc;
+  }
+
+  .prose-custom strong {
+    color: var(--text-primary);
+    @apply font-semibold;
+  }
+
+  .prose-custom pre {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    @apply rounded-xl p-5 overflow-x-auto mb-6 text-sm;
+  }
+
+  .prose-custom code {
+    @apply text-sm font-mono;
+    color: var(--accent-2);
+  }
+
+  .prose-custom pre code {
+    color: var(--text-secondary);
+  }
+
+  .prose-custom table {
+    @apply w-full border-collapse mb-6;
+  }
+
+  .prose-custom th {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    @apply px-4 py-2 text-left text-sm font-semibold;
+    color: var(--text-primary);
+  }
+
+  .prose-custom td {
+    border: 1px solid var(--border);
+    @apply px-4 py-2 text-sm;
+    color: var(--text-secondary);
+  }
+
+  /* animations */
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(24px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
+  @keyframes shimmer {
+    0% { background-position: -200% center; }
+    100% { background-position: 200% center; }
+  }
+
+  .animate-fade-up {
+    animation: fadeUp 0.6s ease forwards;
+  }
+
+  .animate-float {
+    animation: float 5s ease-in-out infinite;
+  }
+}

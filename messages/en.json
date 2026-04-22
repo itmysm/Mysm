@@ -1,0 +1,124 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "experience": "Experience",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hey, I'm",
+    "name": "Meysam Kiani",
+    "title": "Frontend Developer",
+    "badge": "Open to Opportunities",
+    "subtitle": "+4 years crafting fast, modern, and satisfying web experiences.",
+    "cta_projects": "View My Work",
+    "cta_contact": "Get in Touch",
+    "scroll": "Scroll to explore"
+  },
+  "about": {
+    "title": "About Me",
+    "subtitle": "A bit about who I am",
+    "bio": "I'm a 24-year-old frontend developer from Tehran, Iran. I love building new things and I have a real passion for modern, elegant user interfaces. I believe that everything should work correctly and feel genuinely satisfying to use — performance and experience are never an afterthought for me.",
+    "bio2": "With 4+ years of experience across personal projects, government-scale platforms, and startup collaborations, I've learned to write code that scales, performs, and delights.",
+    "stats": {
+      "years": "Years Experience",
+      "projects": "Projects Shipped",
+      "users": "Daily Users Served",
+      "commits": "Open Source"
+    },
+    "stat_values": {
+      "years": "4+",
+      "projects": "10+",
+      "users": "25K+",
+      "commits": "Active"
+    },
+    "location": "Tehran, Iran",
+    "age": "24 years old",
+    "available": "Available for work"
+  },
+  "skills": {
+    "title": "Skills & Stack",
+    "subtitle": "Technologies I work with every day",
+    "categories": {
+      "frameworks": "Frameworks & Libraries",
+      "styling": "Styling & UI",
+      "state": "State Management",
+      "tools": "Tools & DevOps",
+      "other": "Other & Expanding"
+    }
+  },
+  "projects": {
+    "title": "Projects",
+    "subtitle": "Things I've built and shipped",
+    "live": "Live Site",
+    "screenshots": "Screenshots",
+    "types": {
+      "personal": "Personal",
+      "collaboration": "Collaboration",
+      "freelance": "Freelance",
+      "on-site": "On-site"
+    },
+    "slicegames_name": "SliceGames.io",
+    "slicegames_desc": "A personal online gaming platform focused on party games — built from scratch and scaling to 500+ daily unique visitors powered entirely by SEO, zero ads.",
+    "mentorjet_name": "MentorJet.org",
+    "mentorjet_desc": "An online mentoring platform for Iranian users where I served as a core dev team member. Built with Next.js, with plans for international expansion.",
+    "varzeshkar_name": "Varzeshkar.com",
+    "varzeshkar_desc": "A comprehensive fitness platform for finding coaches and training plans across Iran, integrated with AI to generate personalised gym programs.",
+    "23pixel_name": "23Pixel.com",
+    "23pixel_desc": "Freelance refactoring project — after 200+ focused hours, I improved site performance by 114% and dramatically enhanced mobile responsiveness.",
+    "sib_name": "sib.behdasht.gov.ir",
+    "sib_desc": "A large-scale government healthcare system with 500+ features, 25,000+ daily active users, and health data for 80M+ Iranians. I spent 3 years here on-site, leading dark mode, migrations, and legacy browser support."
+  },
+  "experience": {
+    "title": "Experience",
+    "subtitle": "My professional journey",
+    "current": "Current",
+    "promoted_from": "Previously",
+    "journey_start": "From self-taught beginnings in 2019 to senior engineering today.",
+    "level_intern": "Intern",
+    "level_junior": "Junior",
+    "level_mid": "Mid-level",
+    "level_senior": "Senior",
+    "self_learning_title": "Started self-teaching web development",
+    "self_learning_period": "Summer 2019",
+    "dapa_company": "DAPA",
+    "dapa_location": "Tehran, Iran",
+    "dapa_role_senior": "Senior Frontend Developer",
+    "dapa_period_senior": "2024 – Present",
+    "dapa_desc_senior": "Leading frontend architecture decisions, mentoring team members, and driving performance and DX improvements across the platform.",
+    "dapa_role_mid": "Mid-level Frontend Developer",
+    "dapa_period_mid": "Mar 2023 – 2024",
+    "dapa_desc_mid": "Joined DAPA to build and scale complex product features, bringing patterns and experience from previous roles into a faster-paced environment.",
+    "vofour_company": "Vofour Psychology Group",
+    "vofour_location": "Tehran, Iran",
+    "vofour_role_junior": "Junior Frontend Developer",
+    "vofour_period_junior": "Feb 2021 – Feb 2023",
+    "vofour_desc_junior": "Grew into a full junior role, taking ownership of features end-to-end and contributing to the core product over two years of focused learning and shipping.",
+    "vofour_role_intern": "Frontend Developer Intern",
+    "vofour_period_intern": "Oct 2020 – Feb 2021",
+    "vofour_desc_intern": "First professional role — turned self-taught skills into real product work within a psychology-focused tech team."
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Thoughts on frontend, tooling, and the modern web",
+    "read_more": "Read Article",
+    "all_posts": "All Posts",
+    "min_read": "min read",
+    "back": "Back to Blog"
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "subtitle": "Let's build something great together",
+    "email": "dev.mysm@gmail.com",
+    "github": "itmysm",
+    "linkedin": "itmysm"
+  },
+  "footer": {
+    "built_with": "Built with Next.js & HeroUI",
+    "rights": "All rights reserved.",
+    "tagline": "Crafted with care from Iran"
+  }
+}
