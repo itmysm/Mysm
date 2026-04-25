@@ -86,7 +86,7 @@ const config: Config = {
           },
         },
       },
-    }),
+    }) as any,
   ],
 };
 
